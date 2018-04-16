@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381692084712C00D81AE3 /* AppDelegate.m */; };
+		9CF3816D2084712C00D81AE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3816C2084712C00D81AE3 /* ViewController.m */; };
+		9CF381702084712C00D81AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF3816E2084712C00D81AE3 /* Main.storyboard */; };
+		9CF381722084712C00D81AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF381712084712C00D81AE3 /* Assets.xcassets */; };
+		9CF381752084712C00D81AE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF381732084712C00D81AE3 /* LaunchScreen.storyboard */; };
+		9CF381782084712C00D81AE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381772084712C00D81AE3 /* main.m */; };
+		9CF381842084720300D81AE3 /* WLFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381832084720300D81AE3 /* WLFormVC.m */; };
+		9CF38187208472D400D81AE3 /* WLForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF38186208472D400D81AE3 /* WLForm.m */; };
+		9CF3818A208472EA00D81AE3 /* WLFormItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF38189208472EA00D81AE3 /* WLFormItem.m */; };
+		9CF3818D2084730600D81AE3 /* WLFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3818C2084730600D81AE3 /* WLFormSection.m */; };
+		9CF3819420847ABD00D81AE3 /* WLFormSection+row.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819320847ABD00D81AE3 /* WLFormSection+row.m */; };
+		9CF3819720847ACC00D81AE3 /* WLForm+section.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819620847ACC00D81AE3 /* WLForm+section.m */; };
+		9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */; };
+		9CF381A02084A9C500D81AE3 /* StepperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819F2084A9C500D81AE3 /* StepperCell.m */; };
+		9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */; };
+		9CF381A62084AA6500D81AE3 /* GenderPickerViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381A52084AA6500D81AE3 /* GenderPickerViewVC.m */; };
+		E9F991DABCCBFAB979F34EB3 /* libPods-WLForm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 413DDE6FC4DC2BBFAB8FDCD2 /* libPods-WLForm.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		413DDE6FC4DC2BBFAB8FDCD2 /* libPods-WLForm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WLForm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E9D259BDEF4CB6806655A9 /* Pods-WLForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLForm.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLForm/Pods-WLForm.release.xcconfig"; sourceTree = "<group>"; };
+		9CF381652084712C00D81AE3 /* WLForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF381682084712C00D81AE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9CF381692084712C00D81AE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9CF3816B2084712C00D81AE3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9CF3816C2084712C00D81AE3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9CF3816F2084712C00D81AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CF381712084712C00D81AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CF381742084712C00D81AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CF381762084712C00D81AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CF381772084712C00D81AE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9CF381822084720300D81AE3 /* WLFormVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormVC.h; sourceTree = "<group>"; };
+		9CF381832084720300D81AE3 /* WLFormVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormVC.m; sourceTree = "<group>"; };
+		9CF38185208472D400D81AE3 /* WLForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLForm.h; sourceTree = "<group>"; };
+		9CF38186208472D400D81AE3 /* WLForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLForm.m; sourceTree = "<group>"; };
+		9CF38188208472EA00D81AE3 /* WLFormItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormItem.h; sourceTree = "<group>"; };
+		9CF38189208472EA00D81AE3 /* WLFormItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormItem.m; sourceTree = "<group>"; };
+		9CF3818B2084730600D81AE3 /* WLFormSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSection.h; sourceTree = "<group>"; };
+		9CF3818C2084730600D81AE3 /* WLFormSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSection.m; sourceTree = "<group>"; };
+		9CF3819220847ABD00D81AE3 /* WLFormSection+row.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLFormSection+row.h"; sourceTree = "<group>"; };
+		9CF3819320847ABD00D81AE3 /* WLFormSection+row.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLFormSection+row.m"; sourceTree = "<group>"; };
+		9CF3819520847ACC00D81AE3 /* WLForm+section.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLForm+section.h"; sourceTree = "<group>"; };
+		9CF3819620847ACC00D81AE3 /* WLForm+section.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLForm+section.m"; sourceTree = "<group>"; };
+		9CF3819B20849A0800D81AE3 /* UITableViewCell+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extention.h"; sourceTree = "<group>"; };
+		9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extention.m"; sourceTree = "<group>"; };
+		9CF3819E2084A9C500D81AE3 /* StepperCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StepperCell.h; sourceTree = "<group>"; };
+		9CF3819F2084A9C500D81AE3 /* StepperCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StepperCell.m; sourceTree = "<group>"; };
+		9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormTextInputCell.h; sourceTree = "<group>"; };
+		9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormTextInputCell.m; sourceTree = "<group>"; };
+		9CF381A42084AA6500D81AE3 /* GenderPickerViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenderPickerViewVC.h; sourceTree = "<group>"; };
+		9CF381A52084AA6500D81AE3 /* GenderPickerViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenderPickerViewVC.m; sourceTree = "<group>"; };
+		9CF381AA2084D07000D81AE3 /* WLForm.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLForm.pch; sourceTree = "<group>"; };
+		E564B3D2A3ACEA23BB4EF3D0 /* Pods-WLForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLForm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WLForm/Pods-WLForm.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CF381622084712C00D81AE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9F991DABCCBFAB979F34EB3 /* libPods-WLForm.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D7DF3B6473A6D8F02B70977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				413DDE6FC4DC2BBFAB8FDCD2 /* libPods-WLForm.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6390C6FC407565E523B268E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E564B3D2A3ACEA23BB4EF3D0 /* Pods-WLForm.debug.xcconfig */,
+				90E9D259BDEF4CB6806655A9 /* Pods-WLForm.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9CF3815C2084712C00D81AE3 = {
+			isa = PBXGroup;
+			children = (
+				9CF381672084712C00D81AE3 /* WLForm */,
+				9CF381662084712C00D81AE3 /* Products */,
+				6390C6FC407565E523B268E6 /* Pods */,
+				2D7DF3B6473A6D8F02B70977 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9CF381662084712C00D81AE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CF381652084712C00D81AE3 /* WLForm.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CF381672084712C00D81AE3 /* WLForm */ = {
+			isa = PBXGroup;
+			children = (
+				9CF3818E208479BE00D81AE3 /* category */,
+				9CF3817F2084718C00D81AE3 /* Controller */,
+				9CF381802084718C00D81AE3 /* Model */,
+				9CF3817E2084718C00D81AE3 /* View */,
+				9CF381812084718C00D81AE3 /* ViewModel */,
+				9CF381682084712C00D81AE3 /* AppDelegate.h */,
+				9CF381692084712C00D81AE3 /* AppDelegate.m */,
+				9CF3816B2084712C00D81AE3 /* ViewController.h */,
+				9CF3816C2084712C00D81AE3 /* ViewController.m */,
+				9CF381A42084AA6500D81AE3 /* GenderPickerViewVC.h */,
+				9CF381A52084AA6500D81AE3 /* GenderPickerViewVC.m */,
+				9CF3816E2084712C00D81AE3 /* Main.storyboard */,
+				9CF381712084712C00D81AE3 /* Assets.xcassets */,
+				9CF381732084712C00D81AE3 /* LaunchScreen.storyboard */,
+				9CF381762084712C00D81AE3 /* Info.plist */,
+				9CF381772084712C00D81AE3 /* main.m */,
+				9CF381AA2084D07000D81AE3 /* WLForm.pch */,
+			);
+			path = WLForm;
+			sourceTree = "<group>";
+		};
+		9CF3817E2084718C00D81AE3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CF3819E2084A9C500D81AE3 /* StepperCell.h */,
+				9CF3819F2084A9C500D81AE3 /* StepperCell.m */,
+				9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */,
+				9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CF3817F2084718C00D81AE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CF381822084720300D81AE3 /* WLFormVC.h */,
+				9CF381832084720300D81AE3 /* WLFormVC.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9CF381802084718C00D81AE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CF38185208472D400D81AE3 /* WLForm.h */,
+				9CF38186208472D400D81AE3 /* WLForm.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CF381812084718C00D81AE3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9CF38188208472EA00D81AE3 /* WLFormItem.h */,
+				9CF38189208472EA00D81AE3 /* WLFormItem.m */,
+				9CF3818B2084730600D81AE3 /* WLFormSection.h */,
+				9CF3818C2084730600D81AE3 /* WLFormSection.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9CF3818E208479BE00D81AE3 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				9CF3819220847ABD00D81AE3 /* WLFormSection+row.h */,
+				9CF3819320847ABD00D81AE3 /* WLFormSection+row.m */,
+				9CF3819520847ACC00D81AE3 /* WLForm+section.h */,
+				9CF3819620847ACC00D81AE3 /* WLForm+section.m */,
+				9CF3819B20849A0800D81AE3 /* UITableViewCell+Extention.h */,
+				9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CF381642084712C00D81AE3 /* WLForm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF3817B2084712C00D81AE3 /* Build configuration list for PBXNativeTarget "WLForm" */;
+			buildPhases = (
+				3E6620CA1D3E32A58F116CCB /* [CP] Check Pods Manifest.lock */,
+				9CF381612084712C00D81AE3 /* Sources */,
+				9CF381622084712C00D81AE3 /* Frameworks */,
+				9CF381632084712C00D81AE3 /* Resources */,
+				854DBAA12F866A9410F6FB85 /* [CP] Embed Pods Frameworks */,
+				A5FFF9AC1A9A05235BA5FC0B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WLForm;
+			productName = WLForm;
+			productReference = 9CF381652084712C00D81AE3 /* WLForm.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CF3815D2084712C00D81AE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = quangqiang;
+				TargetAttributes = {
+					9CF381642084712C00D81AE3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9CF381602084712C00D81AE3 /* Build configuration list for PBXProject "WLForm" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CF3815C2084712C00D81AE3;
+			productRefGroup = 9CF381662084712C00D81AE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CF381642084712C00D81AE3 /* WLForm */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CF381632084712C00D81AE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF381752084712C00D81AE3 /* LaunchScreen.storyboard in Resources */,
+				9CF381722084712C00D81AE3 /* Assets.xcassets in Resources */,
+				9CF381702084712C00D81AE3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E6620CA1D3E32A58F116CCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WLForm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		854DBAA12F866A9410F6FB85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WLForm/Pods-WLForm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5FFF9AC1A9A05235BA5FC0B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WLForm/Pods-WLForm-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WLForm/Pods-WLForm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CF381612084712C00D81AE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF381A62084AA6500D81AE3 /* GenderPickerViewVC.m in Sources */,
+				9CF3819720847ACC00D81AE3 /* WLForm+section.m in Sources */,
+				9CF3816D2084712C00D81AE3 /* ViewController.m in Sources */,
+				9CF381842084720300D81AE3 /* WLFormVC.m in Sources */,
+				9CF38187208472D400D81AE3 /* WLForm.m in Sources */,
+				9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */,
+				9CF3818A208472EA00D81AE3 /* WLFormItem.m in Sources */,
+				9CF381782084712C00D81AE3 /* main.m in Sources */,
+				9CF3819420847ABD00D81AE3 /* WLFormSection+row.m in Sources */,
+				9CF3818D2084730600D81AE3 /* WLFormSection.m in Sources */,
+				9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */,
+				9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */,
+				9CF381A02084A9C500D81AE3 /* StepperCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9CF3816E2084712C00D81AE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CF3816F2084712C00D81AE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CF381732084712C00D81AE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CF381742084712C00D81AE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CF381792084712C00D81AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9CF3817A2084712C00D81AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CF3817C2084712C00D81AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E564B3D2A3ACEA23BB4EF3D0 /* Pods-WLForm.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WLForm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = guangqaing.WLForm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CF3817D2084712C00D81AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E9D259BDEF4CB6806655A9 /* Pods-WLForm.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WLForm/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = guangqaing.WLForm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CF381602084712C00D81AE3 /* Build configuration list for PBXProject "WLForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF381792084712C00D81AE3 /* Debug */,
+				9CF3817A2084712C00D81AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF3817B2084712C00D81AE3 /* Build configuration list for PBXNativeTarget "WLForm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CF3817C2084712C00D81AE3 /* Debug */,
+				9CF3817D2084712C00D81AE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CF3815D2084712C00D81AE3 /* Project object */;
+}

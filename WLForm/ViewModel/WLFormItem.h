@@ -1,0 +1,65 @@
+//
+//  WLFormItem.h
+//  WLForm
+//
+//  Created by 刘光强 on 2018/4/16.
+//  Copyright © 2018年 quangqiang. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+@class WLFormSection;
+
+typedef void(^itemConfigCompletion)(void);
+
+extern NSString *kValidateRetKey;
+extern NSString *kValidateMsgKey;
+
+// 验证通过
+static inline NSDictionary *itemValid() {
+    return @{kValidateRetKey: @YES};
+}
+
+// 验证不通过
+static inline NSDictionary *itemInvalid(NSString *msg) {
+    return @{kValidateMsgKey: msg ?: @"",
+             kValidateRetKey: @NO};
+}
+
+@interface WLFormItem : NSObject
+
+@property (nonatomic, assign, readonly) UITableViewCellStyle style;
+@property (nonatomic, copy, readonly) NSString *reuseIdentifier;
+@property (nonatomic, strong) Class cellClass;
+@property (nonatomic, copy) NSString *nibName;
+@property (nonatomic, assign) CGFloat itemHeight;
+
+@property (nonatomic, strong) id value;
+@property (nonatomic, copy) NSString *placeholderValue;
+@property (nonatomic, assign) BOOL hasTopSep;
+@property (nonatomic, assign) BOOL hasBottomSep;
+
+@property (nonatomic, assign, getter=isHidden) BOOL hidden;
+
+@property (nonatomic, strong) void(^itemConfigBlock)(id cell, id calue, NSIndexPath *indexPath);
+@property (nonatomic, strong) itemConfigCompletion(^itemConfigBlockWithCompletion)(id cell, id value, NSIndexPath *indexPath);
+
+@property (nonatomic, strong) void(^cellExtraInitBlock)(id cell, id value, NSIndexPath *indexPath);
+
+@property (nonatomic, copy) NSDictionary *(^valueValidateBlock)(id value);
+@property (nonatomic, strong) void(^didSelectBlock)(NSIndexPath *indexPath, id value);
+
+@property (nonatomic, strong) void(^didSelectCellBlock)(NSIndexPath *indexPath, id value, id cell);
+@property (nonatomic, strong) void(^reformResRetBlock)(id ret, id value);
+
+@property (nonatomic, strong) id(^requestParamsConfigBlock)(id value);
+
+@property (nonatomic, copy) NSDictionary *(^enableValidateBlock)(id value, BOOL didClick);
+@property (nonatomic, copy) NSDictionary *(^disableValidateBlock)(id value, BOOL didClick);
+
+@property (nonatomic, weak) WLFormSection *section;
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+
+
+@end
