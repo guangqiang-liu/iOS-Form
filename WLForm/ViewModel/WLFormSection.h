@@ -12,12 +12,37 @@
 
 @interface WLFormSection : NSObject
 
-@property (nonatomic, strong, readonly) NSMutableArray <WLFormItem *> *itemArray;
-@property (nonatomic, assign, readonly) NSUInteger count;
-@property (nonatomic, assign) CGFloat headerHeight;
-@property (nonatomic, assign) CGFloat footerHeight;
-@property (nonatomic, assign, getter=isHidden) BOOL hidden;
+/// sectionHeader
 @property (nonatomic, copy) NSString *headerTitle;
+@property (nonatomic, strong) UIColor *headerTitleColor;
+@property (nonatomic, assign) UIFont *headerTitleFont;
+@property (nonatomic, assign) CGFloat headerTitleMarginLeft;
+@property (nonatomic, assign) CGFloat headerTitleMarginRight;
+@property (nonatomic, assign) CGSize headerTitleSize;
+
+@property (nonatomic, assign) CGFloat headerHeight;
+@property (nonatomic, strong) UIColor *sectionHeaderBgColor;
+
+@property (nonatomic, assign) CGFloat headerTopSepLineHeight;
+@property (nonatomic, strong) UIColor *headerTopSepLineColor;
+
+/// sectionFooter
+@property (nonatomic, copy) NSString *footerTitle;
+@property (nonatomic, strong) UIColor *footerTitleColor;
+@property (nonatomic, assign) UIFont *footerTitleFont;
+@property (nonatomic, assign) CGFloat footerTitleMarginLeft;
+@property (nonatomic, assign) CGFloat footerTitleMarginRight;
+@property (nonatomic, assign) CGSize footerTitleSize;
+
+@property (nonatomic, assign) CGFloat footerHeight;
+@property (nonatomic, strong) UIColor *sectionFooterBgColor;
+
+@property (nonatomic, assign) CGFloat footerTopSepLineHeight;
+@property (nonatomic, strong) UIColor *footerTopSepLineColor;
+
+@property (nonatomic, assign, getter=isHidden) BOOL hidden;
+@property (nonatomic, strong, readonly) NSMutableArray<WLFormItem *> *itemArray;
+@property (nonatomic, assign, readonly) NSUInteger count;
 
 - (void)addItem:(WLFormItem *)item;
 - (void)addItemWithArray:(NSArray <WLFormItem *> *)itemArray;

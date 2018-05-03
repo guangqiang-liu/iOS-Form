@@ -7,6 +7,8 @@
 //
 
 #import "UITableViewCell+Extention.h"
+#import "WLFormItem.h"
+
 #define kTopLineViewTag 90000001
 #define kBottomLineViewTag 90000002
 #define kTouchButtonViewTag 90000003
@@ -16,31 +18,25 @@
 
 @implementation UITableViewCell (Extention)
 
-- (void)updateCellSep:(BOOL)isTop isBottom:(BOOL)isBottom {
+- (void)updateCellSep:(BOOL)isTop isBottom:(BOOL)isBottom viewModel:(WLFormItem *)viewModel {
     UILabel *topLine = [self viewWithTag:kTopLineViewTag];
     UILabel *bottomLine = [self viewWithTag:kBottomLineViewTag];
-    
     if (!topLine) {
         UIColor *color = [UIColor colorWithRed:0.929412 green:0.929412 blue:0.929412 alpha:1];
         topLine = [[UILabel alloc] init];
-        topLine.backgroundColor =color;
+        topLine.backgroundColor = color;
         topLine.tag = kTopLineViewTag;
     }
     [self.contentView addSubview:topLine];
-    
     if (!bottomLine) {
         UIColor *color = [UIColor colorWithRed:0.929412 green:0.929412 blue:0.929412 alpha:1];
         bottomLine = [[UILabel alloc] init];
         bottomLine.backgroundColor = color;
         bottomLine.tag = kBottomLineViewTag;
     }
-    
     [self.contentView addSubview:bottomLine];
-    
-    CGFloat offset = 13;
-    topLine.frame = CGRectMake(0, 0, self.frame.size.width, kSeparatorLineWidth);
-    bottomLine.frame = CGRectMake(offset, self.frame.size.height - kSeparatorLineWidth, self.frame.size.width - offset, kSeparatorLineWidth);
-    
+    topLine.frame = CGRectMake(viewModel.topSepLineMarginLeft, 0, self.frame.size.width, kSeparatorLineWidth);
+    bottomLine.frame = CGRectMake(viewModel.bottomSepLineMarginLeft, self.frame.size.height - kSeparatorLineWidth, self.frame.size.width - viewModel.bottomSepLineMarginLeft, kSeparatorLineWidth);
     topLine.hidden = !isTop;
     bottomLine.hidden = !isBottom;
 }

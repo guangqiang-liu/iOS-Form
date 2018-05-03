@@ -21,6 +21,13 @@ NSString *kValidateMsgKey = @"kValidateMsgKey";
     if (self) {
         _style = style;
         _reuseIdentifier = reuseIdentifier;
+        _hasTopSep = NO;
+        _hasBottomSep = YES;
+        _itemHeight = WLCellHeight;
+        _topSepLineMarginLeft = WLMarginLeft;
+        _topSepLineMarginRight = WLMarginRight;
+        _bottomSepLineMarginLeft = WLMarginLeft;
+        _bottomSepLineMarginRight = WLMarginRight;
     }
     return self;
 }

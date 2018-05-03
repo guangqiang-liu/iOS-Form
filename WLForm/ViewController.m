@@ -13,6 +13,7 @@
 #import "WLFormTextInputCell.h"
 #import "GenderPickerViewVC.h"
 #import "StepperCell.h"
+#import "WLFormMoreInfoCell.h"
 
 @interface ViewController ()
 
@@ -45,35 +46,42 @@
 - (void)configForm {
     [self.form addSection:[self accountSection]];
     [self.form addSection:[self detailSection]];
+    [self.form addSection:[self moreInfoSection]];
 }
 
 - (WLFormSection *)accountSection {
     WLFormSection *section = nil;
-    WLFormItem *item = nil;
+    WLFormItem *row = nil;
     
     section = [[WLFormSection alloc] init];
     section.headerTitle = @"账号";
-    section.headerHeight = 40;
+    section.headerHeight = 50;
+    section.sectionHeaderBgColor = [UIColor whiteColor];
+    section.headerTitleMarginLeft = 15;
+    section.headerTopSepLineHeight = 10;
+    section.headerTopSepLineColor = sepLineColor;
     
     NSDictionary *dic = @{kLeftKey:@"Email", kRightKey:@"大傻逼"};
-    item = [self rowForFieldWithUserInfo:dic];
-    item.reformResRetBlock = ^(id ret, id value) {
+    row = [self rowForFieldWithUserInfo:dic];
+    row.hasTopSep = YES;
+    row.reformResRetBlock = ^(id ret, id value) {
         NSLog(@"ssss");
     };
-    [section addItem:item];
+    [section addItem:row];
     
     dic = @{kLeftKey:@"Password"};
     WLFormItem *row1 = [self rowForFieldWithUserInfo:dic];
     [section addItem:row1];
     
     dic = @{kLeftKey:@"Repeat Password"};
-    item = [self rowForFieldWithUserInfo:dic];
-    item.valueValidateBlock = ^NSDictionary *(id value) {
+    row = [self rowForFieldWithUserInfo:dic];
+    row.hasBottomSep = NO;
+    row.valueValidateBlock = ^NSDictionary *(id value) {
         if ([row1.value[kRightKey] isEqualToString:value[kRightKey]]) return itemValid();
         return itemInvalid(@"Two password should be the same");
     };
     
-    [section addItem:item];
+    [section addItem:row];
     return section;
 }
 
@@ -84,12 +92,15 @@
     
     section = [[WLFormSection alloc] init];
     section.headerTitle = @"详情";
-    section.headerHeight = 40;
+    section.headerHeight = 50;
+    section.sectionHeaderBgColor = [UIColor whiteColor];
+    section.headerTitleMarginLeft = 15;
+    section.headerTopSepLineHeight = 10;
+    section.headerTopSepLineColor = sepLineColor;
     
     NSDictionary *dic = @{kLeftKey:@"Name"};
     row = [self rowForFieldWithUserInfo:dic];
     row.hasTopSep = YES;
-    row.hasBottomSep = YES;
     [section addItem:row];
     
     row = [self rowForGender];
@@ -100,8 +111,35 @@
     [section addItem:row];
     
     row = [self rowForStepper];
+    row.hasBottomSep = NO;
+    
     [section addItem:row];
+    
     return section;
+}
+
+- (WLFormSection *)moreInfoSection {
+    WLFormSection *section = nil;
+    WLFormItem *row = nil;
+    
+    section = [[WLFormSection alloc] init];
+    
+    row = [self rowForMoreInfo];
+    row.hasTopSep = YES;
+    [section addItem:row];
+    
+    return section;
+}
+
+- (WLFormItem *)rowForMoreInfo {
+    WLFormItem *row = nil;
+    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"MoreInfo"];
+    row.cellClass = [WLFormMoreInfoCell class];
+    row.itemHeight = 54.f;
+    row.itemConfigBlock = ^(WLFormMoreInfoCell *cell, id value, NSIndexPath *indexPath) {
+        cell.textLabel.text = value[kLeftKey];
+    };
+    return row;
 }
 
 - (WLFormItem *)rowForGender {

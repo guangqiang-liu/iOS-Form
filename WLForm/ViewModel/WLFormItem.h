@@ -28,18 +28,25 @@ static inline NSDictionary *itemInvalid(NSString *msg) {
 
 @interface WLFormItem : NSObject
 
+@property (nonatomic, assign) CGFloat itemHeight;
+
+@property (nonatomic, assign) BOOL hasTopSep;
+@property (nonatomic, assign) CGFloat topSepLineMarginLeft;
+@property (nonatomic, assign) CGFloat topSepLineMarginRight;
+
+@property (nonatomic, assign) BOOL hasBottomSep;
+@property (nonatomic, assign) CGFloat bottomSepLineMarginLeft;
+@property (nonatomic, assign) CGFloat bottomSepLineMarginRight;
+
+@property (nonatomic, assign, getter=isHidden) BOOL hidden;
+
 @property (nonatomic, assign, readonly) UITableViewCellStyle style;
 @property (nonatomic, copy, readonly) NSString *reuseIdentifier;
 @property (nonatomic, strong) Class cellClass;
 @property (nonatomic, copy) NSString *nibName;
-@property (nonatomic, assign) CGFloat itemHeight;
 
 @property (nonatomic, strong) id value;
 @property (nonatomic, copy) NSString *placeholderValue;
-@property (nonatomic, assign) BOOL hasTopSep;
-@property (nonatomic, assign) BOOL hasBottomSep;
-
-@property (nonatomic, assign, getter=isHidden) BOOL hidden;
 
 @property (nonatomic, strong) void(^itemConfigBlock)(id cell, id calue, NSIndexPath *indexPath);
 @property (nonatomic, strong) itemConfigCompletion(^itemConfigBlockWithCompletion)(id cell, id value, NSIndexPath *indexPath);
@@ -60,6 +67,5 @@ static inline NSDictionary *itemInvalid(NSString *msg) {
 @property (nonatomic, weak) WLFormSection *section;
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
-
 
 @end

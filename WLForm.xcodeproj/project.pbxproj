@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */; };
+		9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C26475A209B08D3004A4551 /* WLFormSectionFooterView.m */; };
+		9C264765209B3E77004A4551 /* WLFormMoreInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */; };
 		9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381692084712C00D81AE3 /* AppDelegate.m */; };
 		9CF3816D2084712C00D81AE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3816C2084712C00D81AE3 /* ViewController.m */; };
 		9CF381702084712C00D81AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF3816E2084712C00D81AE3 /* Main.storyboard */; };
@@ -29,6 +32,15 @@
 /* Begin PBXFileReference section */
 		413DDE6FC4DC2BBFAB8FDCD2 /* libPods-WLForm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WLForm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E9D259BDEF4CB6806655A9 /* Pods-WLForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLForm.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLForm/Pods-WLForm.release.xcconfig"; sourceTree = "<group>"; };
+		9C264755209AFEDA004A4551 /* WLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WLConst.h; sourceTree = "<group>"; };
+		9C264756209B08B3004A4551 /* WLFormSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSectionHeaderView.h; sourceTree = "<group>"; };
+		9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSectionHeaderView.m; sourceTree = "<group>"; };
+		9C264759209B08D3004A4551 /* WLFormSectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSectionFooterView.h; sourceTree = "<group>"; };
+		9C26475A209B08D3004A4551 /* WLFormSectionFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSectionFooterView.m; sourceTree = "<group>"; };
+		9C26475C209B2E65004A4551 /* FontConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontConst.h; sourceTree = "<group>"; };
+		9C26475D209B2E87004A4551 /* ColorConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConst.h; sourceTree = "<group>"; };
+		9C264763209B3E77004A4551 /* WLFormMoreInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormMoreInfoCell.h; sourceTree = "<group>"; };
+		9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormMoreInfoCell.m; sourceTree = "<group>"; };
 		9CF381652084712C00D81AE3 /* WLForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF381682084712C00D81AE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CF381692084712C00D81AE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +104,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9C264754209AFEBF004A4551 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				9C264755209AFEDA004A4551 /* WLConst.h */,
+				9C26475C209B2E65004A4551 /* FontConst.h */,
+				9C26475D209B2E87004A4551 /* ColorConst.h */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		9CF3815C2084712C00D81AE3 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +135,7 @@
 		9CF381672084712C00D81AE3 /* WLForm */ = {
 			isa = PBXGroup;
 			children = (
+				9C264754209AFEBF004A4551 /* Tool */,
 				9CF3818E208479BE00D81AE3 /* category */,
 				9CF3817F2084718C00D81AE3 /* Controller */,
 				9CF381802084718C00D81AE3 /* Model */,
@@ -141,6 +164,12 @@
 				9CF3819F2084A9C500D81AE3 /* StepperCell.m */,
 				9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */,
 				9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */,
+				9C264763209B3E77004A4551 /* WLFormMoreInfoCell.h */,
+				9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */,
+				9C264756209B08B3004A4551 /* WLFormSectionHeaderView.h */,
+				9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */,
+				9C264759209B08D3004A4551 /* WLFormSectionFooterView.h */,
+				9C26475A209B08D3004A4551 /* WLFormSectionFooterView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,10 +349,13 @@
 				9CF3816D2084712C00D81AE3 /* ViewController.m in Sources */,
 				9CF381842084720300D81AE3 /* WLFormVC.m in Sources */,
 				9CF38187208472D400D81AE3 /* WLForm.m in Sources */,
+				9C264765209B3E77004A4551 /* WLFormMoreInfoCell.m in Sources */,
 				9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */,
 				9CF3818A208472EA00D81AE3 /* WLFormItem.m in Sources */,
 				9CF381782084712C00D81AE3 /* main.m in Sources */,
+				9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */,
 				9CF3819420847ABD00D81AE3 /* WLFormSection+row.m in Sources */,
+				9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */,
 				9CF3818D2084730600D81AE3 /* WLFormSection.m in Sources */,
 				9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */,
 				9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */,
@@ -464,6 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B45NW5YEWY;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WLForm/WLForm.pch";
 				INFOPLIST_FILE = WLForm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B45NW5YEWY;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WLForm/WLForm.pch";
 				INFOPLIST_FILE = WLForm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

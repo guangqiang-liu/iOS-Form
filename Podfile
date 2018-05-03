@@ -6,7 +6,5 @@ use_frameworks!
 target 'WLForm' do
   
   # Pods for WLForm
-  
   pod 'IQKeyboardManager'
-
 end

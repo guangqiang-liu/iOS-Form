@@ -16,6 +16,27 @@
 
 @implementation WLFormSection
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _headerTitleColor = WLLeftTitleColor;
+        _headerTitleFont = WLLeftTitleFont;
+        _headerTitleMarginLeft = WLMarginLeft;
+        _headerTitleMarginRight = WLMarginRight;
+        _headerHeight = WLSectionHeaderHeight;
+        _sectionHeaderBgColor = WLSectionHeaderBgColor;
+        
+        _footerTitleFont = WLLeftTitleFont;
+        _footerTitleMarginLeft = WLMarginLeft;
+        _footerTitleMarginRight = WLMarginRight;
+        _footerHeight = WLSectionFooterHeight;
+        _sectionFooterBgColor = WLSectionFooterBgColor;
+        
+        
+    }
+    return self;
+}
+
 - (void)addItem:(WLFormItem *)item {
     item.section = self;
     [self.itemArray addObject:item];
@@ -27,12 +48,26 @@
     }
 }
 
+- (void)setHeaderTitle:(NSString *)headerTitle {
+    if (_headerTitle != headerTitle) {
+        _headerTitle = headerTitle;
+        _headerTitleSize = [self sizeForTitle:headerTitle withFont:_headerTitleFont];
+    }
+}
+
+- (void)setFooterTitle:(NSString *)footerTitle {
+    if (_footerTitle != footerTitle) {
+        _footerTitle = footerTitle;
+        _footerTitleSize = [self sizeForTitle:footerTitle withFont:_footerTitleFont];
+    }
+}
+
 - (CGFloat)footerHeight {
-    return _footerHeight != 0 ? _footerHeight : 0.01;
+    return _footerHeight != 0 ? _footerHeight : 0;
 }
 
 - (CGFloat)headerHeight {
-    return _headerHeight != 0 ? _headerHeight : 0.01;
+    return _headerHeight != 0 ? _headerHeight : 0;
 }
 
 - (NSMutableArray<WLFormItem *> *)itemArray {
@@ -44,6 +79,14 @@
 
 - (NSUInteger)count {
     return self.itemArray.count;
+}
+
+- (CGSize)sizeForTitle:(NSString *)title withFont:(UIFont *)font {
+    CGRect titleRect = [title boundingRectWithSize:CGSizeMake(FLT_MAX, FLT_MAX)
+                                           options:NSStringDrawingUsesLineFragmentOrigin
+                                        attributes:@{NSFontAttributeName:font}
+                                           context:nil];
+    return CGSizeMake(titleRect.size.width, titleRect.size.height);
 }
 
 @end

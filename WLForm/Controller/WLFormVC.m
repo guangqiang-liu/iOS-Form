@@ -11,9 +11,8 @@
 #import "WLFormSection.h"
 #import "WLFormItem.h"
 #import "UITableViewCell+Extention.h"
-
-#define SEREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
-#define SEREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#import "WLFormSectionHeaderView.h"
+#import "WLFormSectionFooterView.h"
 
 @interface WLFormVC ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -37,9 +36,9 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    WLFormSection *sectionT = self.form.sectionArray[section];
+    WLFormSection *viewModel = self.form.sectionArray[section];
     NSInteger count = 0;
-    for (WLFormItem *item in sectionT.itemArray) {
+    for (WLFormItem *item in viewModel.itemArray) {
         if (!item.isHidden) count ++;
     }
     return count;
@@ -56,7 +55,6 @@
         }
         !item.cellExtraInitBlock ?: item.cellExtraInitBlock(cell, item.value, indexPath);
     }
-    
     NSAssert(!(item.itemConfigBlockWithCompletion && item.itemConfigBlock), @"row config block 二选一");
     itemConfigCompletion completion = nil;
     if (item.itemConfigBlock) {
@@ -72,17 +70,7 @@
 #pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     WLFormItem *item = [self.form itemWithIndexPath:indexPath];
-    [cell updateCellSep:item.hasTopSep isBottom:item.hasBottomSep];
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    WLFormSection *sectionT = self.form.sectionArray[section];
-    return sectionT.headerHeight;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    WLFormSection *sectionT = self.form.sectionArray[section];
-    return sectionT.footerHeight;
+    [cell updateCellSep:item.hasTopSep isBottom:item.hasBottomSep viewModel:item];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -90,9 +78,26 @@
     return item.itemHeight == 0 ? UITableViewAutomaticDimension : item.itemHeight;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    WLFormSection *sectionT = self.form.sectionArray[section];
-    return sectionT.headerTitle;
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    WLFormSection *viewModel = self.form.sectionArray[section];
+    return viewModel.headerHeight;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    WLFormSection *viewModel = self.form.sectionArray[section];
+    return viewModel.footerHeight;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    WLFormSection *viewModel = self.form.sectionArray[section];
+    WLFormSectionHeaderView *view = [[WLFormSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, viewModel.headerHeight) viewModel:viewModel];
+    return view;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    WLFormSection *viewModel = self.form.sectionArray[section];
+    WLFormSectionFooterView *view = [[WLFormSectionFooterView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, viewModel.footerHeight) viewModel:viewModel];
+    return view;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -120,7 +125,6 @@
         NSNumber *num = item.disableValidateBlock(item.value, NO)[kValidateRetKey];
         enable = num.boolValue;
     }
-    
     [cell updateCellTouchWithIndexPath:indexPath target:self action:@selector(disableClick:) enable:enable];
 }
 
@@ -145,13 +149,12 @@
 #pragma mark - getter\setter
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SEREEN_WIDTH, SEREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = 50;
-        _tableView.sectionFooterHeight = 0;
-        _tableView.sectionHeaderHeight = 0;
+        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     }
     return _tableView;
 }
