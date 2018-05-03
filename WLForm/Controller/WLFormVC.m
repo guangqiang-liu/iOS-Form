@@ -27,7 +27,7 @@
     [self renderViews];
 }
 
-#pragma mark - DataSource
+#pragma mark - TableView DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger count = 0;
     for (WLFormSection *section in self.form.sectionArray) {
@@ -45,7 +45,6 @@
     return count;
 }
 
-#pragma mark - Delegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     WLFormItem *item = [self.form itemWithIndexPath:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:item.reuseIdentifier];
@@ -70,6 +69,7 @@
     return cell;
 }
 
+#pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     WLFormItem *item = [self.form itemWithIndexPath:indexPath];
     [cell updateCellSep:item.hasTopSep isBottom:item.hasBottomSep];

@@ -111,9 +111,9 @@
                           kDisableKey:@YES};
     row = [self rowForFieldWithUserInfo:dic];
     __weak typeof(self) weakSelf = self;
-    row.didSelectCellBlock = ^(NSIndexPath *indexPath, id value, id cell){
+    row.didSelectCellBlock = ^(NSIndexPath *indexPath, id value, id cell) {
         GenderPickerViewVC *vc = [[GenderPickerViewVC alloc] init];
-        vc.pickBlock = ^(BOOL isMale){
+        vc.pickBlock = ^(BOOL isMale) {
             [weakSelf.navigationController popToViewController:weakSelf animated:YES];
             value[kRightKey] = isMale ? @"Male" : @"Female";
             [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
@@ -127,7 +127,7 @@
     WLFormItem *row = nil;
     NSDictionary *dic = @{kLeftKey:@"Date of Birth"};
     row = [self rowForFieldWithUserInfo:dic];
-    row.disableValidateBlock = ^NSDictionary *(id value, BOOL didClicked){
+    row.disableValidateBlock = ^NSDictionary *(id value, BOOL didClicked) {
         [self.form reformResRet:@{@"key":@"value"}];
         NSString *msg = @"此行已禁用，暂不支持";
         if (didClicked) [self alertMsg:msg];
