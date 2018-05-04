@@ -10,6 +10,23 @@
 		9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */; };
 		9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C26475A209B08D3004A4551 /* WLFormSectionFooterView.m */; };
 		9C264765209B3E77004A4551 /* WLFormMoreInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */; };
+		9C264777209BFFE3004A4551 /* WLFormBottomTipCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264776209BFFE3004A4551 /* WLFormBottomTipCell.m */; };
+		9C26477A209C0021004A4551 /* WLFormRadioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264779209C0021004A4551 /* WLFormRadioCell.m */; };
+		9C26477D209C0039004A4551 /* WLFormCheckboxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C26477C209C0039004A4551 /* WLFormCheckboxCell.m */; };
+		9C264780209C0077004A4551 /* WLFormBottomButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C26477F209C0077004A4551 /* WLFormBottomButtonCell.m */; };
+		9C2647C1209C23A8004A4551 /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647C0209C23A8004A4551 /* UIImage+Gradient.m */; };
+		9C2647C4209C23B8004A4551 /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647C3209C23B8004A4551 /* UIButton+Gradient.m */; };
+		9C2647CA209C3372004A4551 /* UIView+WLSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647C9209C3372004A4551 /* UIView+WLSize.m */; };
+		9C2647CE209C3EEA004A4551 /* icon_unSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647CC209C3EEA004A4551 /* icon_unSelected@2x.png */; };
+		9C2647CF209C3EEA004A4551 /* icon_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647CD209C3EEA004A4551 /* icon_selected@2x.png */; };
+		9C2647D2209C4722004A4551 /* UIButton+WLContentExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647D1209C4722004A4551 /* UIButton+WLContentExtention.m */; };
+		9C2647D5209C49FE004A4551 /* WLFormStepperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647D4209C49FE004A4551 /* WLFormStepperCell.m */; };
+		9C2647D8209C4E2E004A4551 /* foldDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647D6209C4E2E004A4551 /* foldDown@2x.png */; };
+		9C2647D9209C4E2E004A4551 /* foldUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647D7209C4E2E004A4551 /* foldUp@2x.png */; };
+		9C2647DC209C57B9004A4551 /* UIView+WLGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647DB209C57B9004A4551 /* UIView+WLGestureBlock.m */; };
+		9C2647DF209C66CF004A4551 /* WLFormSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */; };
+		9C2647E2209C6B81004A4551 /* icon_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647E0209C6B81004A4551 /* icon_arrow@3x.png */; };
+		9C2647E3209C6B81004A4551 /* icon_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647E1209C6B81004A4551 /* icon_arrow@2x.png */; };
 		9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381692084712C00D81AE3 /* AppDelegate.m */; };
 		9CF3816D2084712C00D81AE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3816C2084712C00D81AE3 /* ViewController.m */; };
 		9CF381702084712C00D81AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF3816E2084712C00D81AE3 /* Main.storyboard */; };
@@ -23,7 +40,6 @@
 		9CF3819420847ABD00D81AE3 /* WLFormSection+row.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819320847ABD00D81AE3 /* WLFormSection+row.m */; };
 		9CF3819720847ACC00D81AE3 /* WLForm+section.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819620847ACC00D81AE3 /* WLForm+section.m */; };
 		9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */; };
-		9CF381A02084A9C500D81AE3 /* StepperCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819F2084A9C500D81AE3 /* StepperCell.m */; };
 		9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */; };
 		9CF381A62084AA6500D81AE3 /* GenderPickerViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381A52084AA6500D81AE3 /* GenderPickerViewVC.m */; };
 		E9F991DABCCBFAB979F34EB3 /* libPods-WLForm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 413DDE6FC4DC2BBFAB8FDCD2 /* libPods-WLForm.a */; };
@@ -41,6 +57,35 @@
 		9C26475D209B2E87004A4551 /* ColorConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConst.h; sourceTree = "<group>"; };
 		9C264763209B3E77004A4551 /* WLFormMoreInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormMoreInfoCell.h; sourceTree = "<group>"; };
 		9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormMoreInfoCell.m; sourceTree = "<group>"; };
+		9C264775209BFFE3004A4551 /* WLFormBottomTipCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormBottomTipCell.h; sourceTree = "<group>"; };
+		9C264776209BFFE3004A4551 /* WLFormBottomTipCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormBottomTipCell.m; sourceTree = "<group>"; };
+		9C264778209C0021004A4551 /* WLFormRadioCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormRadioCell.h; sourceTree = "<group>"; };
+		9C264779209C0021004A4551 /* WLFormRadioCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormRadioCell.m; sourceTree = "<group>"; };
+		9C26477B209C0039004A4551 /* WLFormCheckboxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormCheckboxCell.h; sourceTree = "<group>"; };
+		9C26477C209C0039004A4551 /* WLFormCheckboxCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormCheckboxCell.m; sourceTree = "<group>"; };
+		9C26477E209C0077004A4551 /* WLFormBottomButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormBottomButtonCell.h; sourceTree = "<group>"; };
+		9C26477F209C0077004A4551 /* WLFormBottomButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormBottomButtonCell.m; sourceTree = "<group>"; };
+		9C2647BF209C23A8004A4551 /* UIImage+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
+		9C2647C0209C23A8004A4551 /* UIImage+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
+		9C2647C2209C23B8004A4551 /* UIButton+Gradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Gradient.h"; sourceTree = "<group>"; };
+		9C2647C3209C23B8004A4551 /* UIButton+Gradient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Gradient.m"; sourceTree = "<group>"; };
+		9C2647C8209C3372004A4551 /* UIView+WLSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WLSize.h"; sourceTree = "<group>"; };
+		9C2647C9209C3372004A4551 /* UIView+WLSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WLSize.m"; sourceTree = "<group>"; };
+		9C2647CC209C3EEA004A4551 /* icon_unSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_unSelected@2x.png"; sourceTree = "<group>"; };
+		9C2647CD209C3EEA004A4551 /* icon_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_selected@2x.png"; sourceTree = "<group>"; };
+		9C2647D0209C4722004A4551 /* UIButton+WLContentExtention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+WLContentExtention.h"; sourceTree = "<group>"; };
+		9C2647D1209C4722004A4551 /* UIButton+WLContentExtention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WLContentExtention.m"; sourceTree = "<group>"; };
+		9C2647D3209C49FE004A4551 /* WLFormStepperCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormStepperCell.h; sourceTree = "<group>"; };
+		9C2647D4209C49FE004A4551 /* WLFormStepperCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormStepperCell.m; sourceTree = "<group>"; };
+		9C2647D6209C4E2E004A4551 /* foldDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foldDown@2x.png"; sourceTree = "<group>"; };
+		9C2647D7209C4E2E004A4551 /* foldUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "foldUp@2x.png"; sourceTree = "<group>"; };
+		9C2647DA209C57B9004A4551 /* UIView+WLGestureBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WLGestureBlock.h"; sourceTree = "<group>"; };
+		9C2647DB209C57B9004A4551 /* UIView+WLGestureBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WLGestureBlock.m"; sourceTree = "<group>"; };
+		9C2647DD209C66CF004A4551 /* WLFormSelectCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSelectCell.h; sourceTree = "<group>"; };
+		9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSelectCell.m; sourceTree = "<group>"; };
+		9C2647E0209C6B81004A4551 /* icon_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow@3x.png"; sourceTree = "<group>"; };
+		9C2647E1209C6B81004A4551 /* icon_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow@2x.png"; sourceTree = "<group>"; };
+		9C2647E4209CC2A1004A4551 /* LogConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogConst.h; sourceTree = "<group>"; };
 		9CF381652084712C00D81AE3 /* WLForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF381682084712C00D81AE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CF381692084712C00D81AE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,8 +110,6 @@
 		9CF3819620847ACC00D81AE3 /* WLForm+section.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLForm+section.m"; sourceTree = "<group>"; };
 		9CF3819B20849A0800D81AE3 /* UITableViewCell+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extention.h"; sourceTree = "<group>"; };
 		9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Extention.m"; sourceTree = "<group>"; };
-		9CF3819E2084A9C500D81AE3 /* StepperCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StepperCell.h; sourceTree = "<group>"; };
-		9CF3819F2084A9C500D81AE3 /* StepperCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StepperCell.m; sourceTree = "<group>"; };
 		9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormTextInputCell.h; sourceTree = "<group>"; };
 		9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormTextInputCell.m; sourceTree = "<group>"; };
 		9CF381A42084AA6500D81AE3 /* GenderPickerViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenderPickerViewVC.h; sourceTree = "<group>"; };
@@ -110,8 +153,22 @@
 				9C264755209AFEDA004A4551 /* WLConst.h */,
 				9C26475C209B2E65004A4551 /* FontConst.h */,
 				9C26475D209B2E87004A4551 /* ColorConst.h */,
+				9C2647E4209CC2A1004A4551 /* LogConst.h */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		9C2647CB209C3CDE004A4551 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9C2647D6209C4E2E004A4551 /* foldDown@2x.png */,
+				9C2647D7209C4E2E004A4551 /* foldUp@2x.png */,
+				9C2647CD209C3EEA004A4551 /* icon_selected@2x.png */,
+				9C2647CC209C3EEA004A4551 /* icon_unSelected@2x.png */,
+				9C2647E1209C6B81004A4551 /* icon_arrow@2x.png */,
+				9C2647E0209C6B81004A4551 /* icon_arrow@3x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		9CF3815C2084712C00D81AE3 = {
@@ -135,6 +192,7 @@
 		9CF381672084712C00D81AE3 /* WLForm */ = {
 			isa = PBXGroup;
 			children = (
+				9C2647CB209C3CDE004A4551 /* Resource */,
 				9C264754209AFEBF004A4551 /* Tool */,
 				9CF3818E208479BE00D81AE3 /* category */,
 				9CF3817F2084718C00D81AE3 /* Controller */,
@@ -160,12 +218,22 @@
 		9CF3817E2084718C00D81AE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9CF3819E2084A9C500D81AE3 /* StepperCell.h */,
-				9CF3819F2084A9C500D81AE3 /* StepperCell.m */,
+				9C2647D3209C49FE004A4551 /* WLFormStepperCell.h */,
+				9C2647D4209C49FE004A4551 /* WLFormStepperCell.m */,
 				9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */,
 				9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */,
 				9C264763209B3E77004A4551 /* WLFormMoreInfoCell.h */,
 				9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */,
+				9C264778209C0021004A4551 /* WLFormRadioCell.h */,
+				9C264779209C0021004A4551 /* WLFormRadioCell.m */,
+				9C26477B209C0039004A4551 /* WLFormCheckboxCell.h */,
+				9C26477C209C0039004A4551 /* WLFormCheckboxCell.m */,
+				9C264775209BFFE3004A4551 /* WLFormBottomTipCell.h */,
+				9C264776209BFFE3004A4551 /* WLFormBottomTipCell.m */,
+				9C2647DD209C66CF004A4551 /* WLFormSelectCell.h */,
+				9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */,
+				9C26477E209C0077004A4551 /* WLFormBottomButtonCell.h */,
+				9C26477F209C0077004A4551 /* WLFormBottomButtonCell.m */,
 				9C264756209B08B3004A4551 /* WLFormSectionHeaderView.h */,
 				9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */,
 				9C264759209B08D3004A4551 /* WLFormSectionFooterView.h */,
@@ -212,6 +280,16 @@
 				9CF3819620847ACC00D81AE3 /* WLForm+section.m */,
 				9CF3819B20849A0800D81AE3 /* UITableViewCell+Extention.h */,
 				9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */,
+				9C2647BF209C23A8004A4551 /* UIImage+Gradient.h */,
+				9C2647C0209C23A8004A4551 /* UIImage+Gradient.m */,
+				9C2647C2209C23B8004A4551 /* UIButton+Gradient.h */,
+				9C2647C3209C23B8004A4551 /* UIButton+Gradient.m */,
+				9C2647C8209C3372004A4551 /* UIView+WLSize.h */,
+				9C2647C9209C3372004A4551 /* UIView+WLSize.m */,
+				9C2647D0209C4722004A4551 /* UIButton+WLContentExtention.h */,
+				9C2647D1209C4722004A4551 /* UIButton+WLContentExtention.m */,
+				9C2647DA209C57B9004A4551 /* UIView+WLGestureBlock.h */,
+				9C2647DB209C57B9004A4551 /* UIView+WLGestureBlock.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -277,9 +355,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C2647D9209C4E2E004A4551 /* foldUp@2x.png in Resources */,
 				9CF381752084712C00D81AE3 /* LaunchScreen.storyboard in Resources */,
+				9C2647E2209C6B81004A4551 /* icon_arrow@3x.png in Resources */,
+				9C2647CF209C3EEA004A4551 /* icon_selected@2x.png in Resources */,
 				9CF381722084712C00D81AE3 /* Assets.xcassets in Resources */,
+				9C2647E3209C6B81004A4551 /* icon_arrow@2x.png in Resources */,
 				9CF381702084712C00D81AE3 /* Main.storyboard in Resources */,
+				9C2647CE209C3EEA004A4551 /* icon_unSelected@2x.png in Resources */,
+				9C2647D8209C4E2E004A4551 /* foldDown@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,21 +429,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF381A62084AA6500D81AE3 /* GenderPickerViewVC.m in Sources */,
+				9C264777209BFFE3004A4551 /* WLFormBottomTipCell.m in Sources */,
+				9C2647DC209C57B9004A4551 /* UIView+WLGestureBlock.m in Sources */,
 				9CF3819720847ACC00D81AE3 /* WLForm+section.m in Sources */,
+				9C264780209C0077004A4551 /* WLFormBottomButtonCell.m in Sources */,
+				9C26477D209C0039004A4551 /* WLFormCheckboxCell.m in Sources */,
 				9CF3816D2084712C00D81AE3 /* ViewController.m in Sources */,
 				9CF381842084720300D81AE3 /* WLFormVC.m in Sources */,
 				9CF38187208472D400D81AE3 /* WLForm.m in Sources */,
+				9C2647D5209C49FE004A4551 /* WLFormStepperCell.m in Sources */,
 				9C264765209B3E77004A4551 /* WLFormMoreInfoCell.m in Sources */,
+				9C2647C4209C23B8004A4551 /* UIButton+Gradient.m in Sources */,
 				9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */,
 				9CF3818A208472EA00D81AE3 /* WLFormItem.m in Sources */,
+				9C2647DF209C66CF004A4551 /* WLFormSelectCell.m in Sources */,
+				9C26477A209C0021004A4551 /* WLFormRadioCell.m in Sources */,
 				9CF381782084712C00D81AE3 /* main.m in Sources */,
 				9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */,
 				9CF3819420847ABD00D81AE3 /* WLFormSection+row.m in Sources */,
 				9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */,
+				9C2647D2209C4722004A4551 /* UIButton+WLContentExtention.m in Sources */,
 				9CF3818D2084730600D81AE3 /* WLFormSection.m in Sources */,
 				9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */,
+				9C2647CA209C3372004A4551 /* UIView+WLSize.m in Sources */,
 				9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */,
-				9CF381A02084A9C500D81AE3 /* StepperCell.m in Sources */,
+				9C2647C1209C23A8004A4551 /* UIImage+Gradient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

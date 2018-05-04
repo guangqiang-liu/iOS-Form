@@ -10,10 +10,8 @@
 #define FontConst_h
 
 /// 设置字体
-#define UIFontSystem(x) [UIFont systemFontOfSize:x]
-#define UIFontBoldSystem(x) [UIFont boldSystemFontOfSize:x]
-#define WLFont(isBold, fontSize)  \
-isBold ?[UIFont boldSystemFontOfSize:fontSize] :[UIFont systemFontOfSize:fontSize]
+#define SYS_FONT(x) [UIFont systemFontOfSize:x]
+#define BS_FONT(x) [UIFont boldSystemFontOfSize:x]
 
 /// 正常字体
 #define H30 [UIFont systemFontOfSize:30]

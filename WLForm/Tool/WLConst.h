@@ -11,6 +11,12 @@
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+
+#define X(v) (v).frame.origin.x
+#define Y(v) (v).frame.origin.y
+#define WIDTH(v) (v).frame.size.width
+#define HEIGHT(v) (v).frame.size.height
 
 #define MinX(v) CGRectGetMinX((v).frame)
 #define MinY(v) CGRectGetMinY((v).frame)
@@ -45,6 +51,11 @@
 
 #define WLSectionHeaderBgColor [UIColor whiteColor]
 #define WLSectionFooterBgColor [UIColor grayColor]
+
+#define UIImageName(x) [UIImage imageNamed:x]
+
+#define WEAK_SELF __weak typeof(self) weakSelf = self
+#define STRONG_SELF __strong typeof(weakSelf) self = weakSelf
 
 #import "FontConst.h"
 #import "ColorConst.h"

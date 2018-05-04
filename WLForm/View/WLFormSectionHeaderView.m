@@ -45,7 +45,7 @@
 - (UILabel *)titleLable {
     if (!_titleLable) {
         _titleLable = [[UILabel alloc] init];
-        _titleLable.frame = CGRectMake(self.viewModel.headerTitleMarginLeft, (self.viewModel.headerHeight +  self.viewModel.headerTopSepLineHeight - self.viewModel.headerTitleSize.height) / 2, self.viewModel.headerTitleSize.width, self.viewModel.headerTitleSize.height);
+        _titleLable.frame = CGRectMake(15, (self.viewModel.headerHeight +  self.viewModel.headerTopSepLineHeight - self.viewModel.headerTitleSize.height) / 2, self.viewModel.headerTitleSize.width, self.viewModel.headerTitleSize.height);
         _titleLable.text = self.viewModel.headerTitle;
         _titleLable.textColor = self.viewModel.headerTitleColor;
         _titleLable.font = self.viewModel.headerTitleFont;

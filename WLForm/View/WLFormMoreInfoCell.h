@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^MoreInfoBlock)(void);
+
 @interface WLFormMoreInfoCell : UITableViewCell
 
+@property (nonatomic, strong) UILabel *leftTitle;
+@property (nonatomic, copy) MoreInfoBlock moreInfoBlock;
 @end

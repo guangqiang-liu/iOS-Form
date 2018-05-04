@@ -11,7 +11,8 @@
 @interface WLFormMoreInfoCell()
 
 @property (nonatomic, strong) UIView *sepLine;
-@property (nonatomic, strong) UIButton *foldButton;
+@property (nonatomic, strong) UIButton *rightButton;
+@property (nonatomic, assign) BOOL isSpread;
 @end
 
 @implementation WLFormMoreInfoCell
@@ -19,6 +20,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.isSpread = NO;
         [self renderViews];
     }
     return self;
@@ -26,11 +28,16 @@
 
 - (void)renderViews {
     [self.contentView addSubview:self.sepLine];
-    [self.contentView addSubview:self.foldButton];
+    [self.contentView addSubview:self.leftTitle];
+    [self.contentView addSubview:self.rightButton];
 }
 
 - (void)foldClick {
-    
+    self.isSpread =! self.isSpread;
+    [self.rightButton setImage:self.isSpread ? UIImageName(@"foldUp") : UIImageName(@"foldDown") forState:UIControlStateNormal];
+    if (self.moreInfoBlock) {
+        self.moreInfoBlock();
+    }
 }
 
 - (UIView *)sepLine {
@@ -42,15 +49,28 @@
     return _sepLine;
 }
 
-- (UIButton *)foldButton {
-    if (!_foldButton) {
-        _foldButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _foldButton.frame = CGRectMake(0, 10, SCREEN_WIDTH, 44);
-        [_foldButton setTitle:@"更多信息(选填)" forState:UIControlStateNormal];
-        [_foldButton addTarget:self action:@selector(foldClick) forControlEvents:UIControlEventTouchUpInside];
-        [_foldButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+- (UILabel *)leftTitle {
+    if (!_leftTitle) {
+        _leftTitle = [[UILabel alloc] init];
+        CGSize titleSize = [_leftTitle sizeForTitle:@"更多信息（选填）" withFont:H14];
+        _leftTitle.frame = CGRectMake(15, (54 - titleSize.height) / 2 + 5, SCREEN_WIDTH, titleSize.height);
+        _leftTitle.textColor = HexRGB(0x999999);
+        _leftTitle.font = H14;
+        [_leftTitle whenTapped:^{
+            [self foldClick];
+        }];
     }
-    return _foldButton;
+    return _leftTitle;
+}
+
+- (UIButton *)rightButton {
+    if (!_rightButton) {
+        _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _rightButton.frame = CGRectMake(SCREEN_WIDTH - 40, (54 - 20) / 2 + 5, 30, 20);
+        [_rightButton setImage:UIImageName(@"foldUp") forState:UIControlStateNormal];
+        [_rightButton addTarget:self action:@selector(foldClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _rightButton;
 }
 
 @end

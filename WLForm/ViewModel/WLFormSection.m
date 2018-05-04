@@ -32,7 +32,6 @@
         _footerHeight = WLSectionFooterHeight;
         _sectionFooterBgColor = WLSectionFooterBgColor;
         
-        
     }
     return self;
 }

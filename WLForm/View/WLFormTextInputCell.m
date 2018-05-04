@@ -15,10 +15,14 @@ static const CGFloat kFieldWidth = 150.f;
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self.contentView addSubview:self.leftlabel];
-        [self.contentView addSubview:self.rightField];
+        [self renderViews];
     }
     return self;
+}
+
+- (void)renderViews {
+    [self.contentView addSubview:self.leftlabel];
+    [self.contentView addSubview:self.rightField];
 }
 
 - (void)textFieldDidChange:(UITextField *)field {
@@ -29,11 +33,10 @@ static const CGFloat kFieldWidth = 150.f;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGFloat margin = 15;
-    self.leftlabel.frame = CGRectMake(margin, 0, self.contentView.frame.size.width, self.contentView.frame.size.height);
+    CGSize leftTitleSize = [self.leftlabel sizeForTitle:self.leftlabel.text withFont:H14];
+    self.leftlabel.frame = CGRectMake(15, 0, self.contentView.frame.size.width, self.contentView.frame.size.height);
     CGFloat padding = 10;
-    CGFloat x = self.contentView.frame.size.width - margin - kFieldWidth;
-    self.rightField.frame = CGRectMake(x, padding, kFieldWidth, self.contentView.frame.size.height - 2 * padding);
+    self.rightField.frame = CGRectMake(leftTitleSize.width + 30, padding, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15), self.contentView.frame.size.height - 2 * padding);
 }
 
 - (void)setTextChangeBlock:(void (^)(NSString *))textChangeBlock {
@@ -42,10 +45,10 @@ static const CGFloat kFieldWidth = 150.f;
 }
 
 - (UILabel *)leftlabel {
-    if (!_leftlabel){
+    if (!_leftlabel) {
         _leftlabel = [[UILabel alloc] init];
-        _leftlabel.font = [UIFont systemFontOfSize:15];
-        _leftlabel.textColor = [UIColor blackColor];
+        _leftlabel.font = H14;
+        _leftlabel.textColor = HexRGB(0x999999);
     }
     return _leftlabel;
 }
@@ -54,8 +57,8 @@ static const CGFloat kFieldWidth = 150.f;
     if (!_rightField) {
         _rightField = [[UITextField alloc] init];
         _rightField.textAlignment = NSTextAlignmentRight;
-        _rightField.textColor = [UIColor darkGrayColor];
-        _rightField.font = [UIFont systemFontOfSize:13];
+        _rightField.textColor = HexRGB(0x434343);
+        _rightField.font = H14;
     }
     return _rightField;
 }

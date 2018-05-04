@@ -1,28 +1,31 @@
 //
-//  StepperCell.m
+//  WLFormStepperCell.m
 //  WLForm
 //
-//  Created by 刘光强 on 2018/4/16.
+//  Created by 刘光强 on 2018/5/4.
 //  Copyright © 2018年 quangqiang. All rights reserved.
 //
 
-#import "StepperCell.h"
+#import "WLFormStepperCell.h"
 
-@interface StepperCell ()
+@interface WLFormStepperCell()
 
 @property (nonatomic, strong) UIStepper *stepper;
-
 @end
 
-@implementation StepperCell
+@implementation WLFormStepperCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self.contentView addSubview:self.stepper];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        [self renderViews];
     }
     return self;
+}
+
+-(void)renderViews {
+    [self.contentView addSubview:self.stepper];
 }
 
 - (void)layoutSubviews {
