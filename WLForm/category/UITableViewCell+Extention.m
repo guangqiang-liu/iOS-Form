@@ -7,7 +7,7 @@
 //
 
 #import "UITableViewCell+Extention.h"
-#import "WLFormItem.h"
+#import "WLFormItemViewModel.h"
 
 #define kTopLineViewTag 90000001
 #define kBottomLineViewTag 90000002
@@ -18,7 +18,7 @@
 
 @implementation UITableViewCell (Extention)
 
-- (void)updateCellSep:(BOOL)isTop isBottom:(BOOL)isBottom viewModel:(WLFormItem *)viewModel {
+- (void)updateCellSep:(BOOL)isTop isBottom:(BOOL)isBottom viewModel:(WLFormItemViewModel *)viewModel {
     UILabel *topLine = [self viewWithTag:kTopLineViewTag];
     UILabel *bottomLine = [self viewWithTag:kBottomLineViewTag];
     if (!topLine) {

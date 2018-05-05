@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WLFormSection;
+@class WLFormSectionViewModel;
 
 @interface WLFormSectionHeaderView : UIView
 
-- (instancetype)initWithFrame:(CGRect)frame viewModel:(WLFormSection *)viewModel;
+- (instancetype)initWithFrame:(CGRect)frame viewModel:(WLFormSectionViewModel *)viewModel;
 @end

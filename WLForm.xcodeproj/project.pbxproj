@@ -35,9 +35,9 @@
 		9CF381782084712C00D81AE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381772084712C00D81AE3 /* main.m */; };
 		9CF381842084720300D81AE3 /* WLFormVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381832084720300D81AE3 /* WLFormVC.m */; };
 		9CF38187208472D400D81AE3 /* WLForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF38186208472D400D81AE3 /* WLForm.m */; };
-		9CF3818A208472EA00D81AE3 /* WLFormItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF38189208472EA00D81AE3 /* WLFormItem.m */; };
-		9CF3818D2084730600D81AE3 /* WLFormSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3818C2084730600D81AE3 /* WLFormSection.m */; };
-		9CF3819420847ABD00D81AE3 /* WLFormSection+row.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819320847ABD00D81AE3 /* WLFormSection+row.m */; };
+		9CF3818A208472EA00D81AE3 /* WLFormItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF38189208472EA00D81AE3 /* WLFormItemViewModel.m */; };
+		9CF3818D2084730600D81AE3 /* WLFormSectionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3818C2084730600D81AE3 /* WLFormSectionViewModel.m */; };
+		9CF3819420847ABD00D81AE3 /* WLFormSectionViewModel+row.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819320847ABD00D81AE3 /* WLFormSectionViewModel+row.m */; };
 		9CF3819720847ACC00D81AE3 /* WLForm+section.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819620847ACC00D81AE3 /* WLForm+section.m */; };
 		9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */; };
 		9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */; };
@@ -100,12 +100,12 @@
 		9CF381832084720300D81AE3 /* WLFormVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormVC.m; sourceTree = "<group>"; };
 		9CF38185208472D400D81AE3 /* WLForm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLForm.h; sourceTree = "<group>"; };
 		9CF38186208472D400D81AE3 /* WLForm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLForm.m; sourceTree = "<group>"; };
-		9CF38188208472EA00D81AE3 /* WLFormItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormItem.h; sourceTree = "<group>"; };
-		9CF38189208472EA00D81AE3 /* WLFormItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormItem.m; sourceTree = "<group>"; };
-		9CF3818B2084730600D81AE3 /* WLFormSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSection.h; sourceTree = "<group>"; };
-		9CF3818C2084730600D81AE3 /* WLFormSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSection.m; sourceTree = "<group>"; };
-		9CF3819220847ABD00D81AE3 /* WLFormSection+row.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLFormSection+row.h"; sourceTree = "<group>"; };
-		9CF3819320847ABD00D81AE3 /* WLFormSection+row.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLFormSection+row.m"; sourceTree = "<group>"; };
+		9CF38188208472EA00D81AE3 /* WLFormItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormItemViewModel.h; sourceTree = "<group>"; };
+		9CF38189208472EA00D81AE3 /* WLFormItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormItemViewModel.m; sourceTree = "<group>"; };
+		9CF3818B2084730600D81AE3 /* WLFormSectionViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSectionViewModel.h; sourceTree = "<group>"; };
+		9CF3818C2084730600D81AE3 /* WLFormSectionViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSectionViewModel.m; sourceTree = "<group>"; };
+		9CF3819220847ABD00D81AE3 /* WLFormSectionViewModel+row.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLFormSectionViewModel+row.h"; sourceTree = "<group>"; };
+		9CF3819320847ABD00D81AE3 /* WLFormSectionViewModel+row.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLFormSectionViewModel+row.m"; sourceTree = "<group>"; };
 		9CF3819520847ACC00D81AE3 /* WLForm+section.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WLForm+section.h"; sourceTree = "<group>"; };
 		9CF3819620847ACC00D81AE3 /* WLForm+section.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WLForm+section.m"; sourceTree = "<group>"; };
 		9CF3819B20849A0800D81AE3 /* UITableViewCell+Extention.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Extention.h"; sourceTree = "<group>"; };
@@ -263,10 +263,10 @@
 		9CF381812084718C00D81AE3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9CF38188208472EA00D81AE3 /* WLFormItem.h */,
-				9CF38189208472EA00D81AE3 /* WLFormItem.m */,
-				9CF3818B2084730600D81AE3 /* WLFormSection.h */,
-				9CF3818C2084730600D81AE3 /* WLFormSection.m */,
+				9CF38188208472EA00D81AE3 /* WLFormItemViewModel.h */,
+				9CF38189208472EA00D81AE3 /* WLFormItemViewModel.m */,
+				9CF3818B2084730600D81AE3 /* WLFormSectionViewModel.h */,
+				9CF3818C2084730600D81AE3 /* WLFormSectionViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -274,8 +274,8 @@
 		9CF3818E208479BE00D81AE3 /* category */ = {
 			isa = PBXGroup;
 			children = (
-				9CF3819220847ABD00D81AE3 /* WLFormSection+row.h */,
-				9CF3819320847ABD00D81AE3 /* WLFormSection+row.m */,
+				9CF3819220847ABD00D81AE3 /* WLFormSectionViewModel+row.h */,
+				9CF3819320847ABD00D81AE3 /* WLFormSectionViewModel+row.m */,
 				9CF3819520847ACC00D81AE3 /* WLForm+section.h */,
 				9CF3819620847ACC00D81AE3 /* WLForm+section.m */,
 				9CF3819B20849A0800D81AE3 /* UITableViewCell+Extention.h */,
@@ -441,15 +441,15 @@
 				9C264765209B3E77004A4551 /* WLFormMoreInfoCell.m in Sources */,
 				9C2647C4209C23B8004A4551 /* UIButton+Gradient.m in Sources */,
 				9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */,
-				9CF3818A208472EA00D81AE3 /* WLFormItem.m in Sources */,
+				9CF3818A208472EA00D81AE3 /* WLFormItemViewModel.m in Sources */,
 				9C2647DF209C66CF004A4551 /* WLFormSelectCell.m in Sources */,
 				9C26477A209C0021004A4551 /* WLFormRadioCell.m in Sources */,
 				9CF381782084712C00D81AE3 /* main.m in Sources */,
 				9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */,
-				9CF3819420847ABD00D81AE3 /* WLFormSection+row.m in Sources */,
+				9CF3819420847ABD00D81AE3 /* WLFormSectionViewModel+row.m in Sources */,
 				9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */,
 				9C2647D2209C4722004A4551 /* UIButton+WLContentExtention.m in Sources */,
-				9CF3818D2084730600D81AE3 /* WLFormSection.m in Sources */,
+				9CF3818D2084730600D81AE3 /* WLFormSectionViewModel.m in Sources */,
 				9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */,
 				9C2647CA209C3372004A4551 /* UIView+WLSize.m in Sources */,
 				9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */,

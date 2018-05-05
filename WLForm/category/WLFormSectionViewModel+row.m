@@ -1,24 +1,24 @@
 //
-//  WLFormSection+row.m
+//  WLFormSectionViewModel+row.m
 //  WLForm
 //
 //  Created by 刘光强 on 2018/4/16.
 //  Copyright © 2018年 quangqiang. All rights reserved.
 //
 
-#import "WLFormSection+row.h"
-#import "WLFormItem.h"
+#import "WLFormSectionViewModel+row.h"
+#import "WLFormItemViewModel.h"
 
-@implementation WLFormSection (row)
+@implementation WLFormSectionViewModel (row)
 
-- (WLFormItem *)getItemWithIndex:(NSInteger) index {
+- (WLFormItemViewModel *)getItemWithIndex:(NSInteger) index {
     if (self.itemArray.count > index) {
         return self.itemArray[index];
     }
     return nil;
 }
 
-- (void)setItem:(WLFormItem *)item index:(NSInteger)index {
+- (void)setItem:(WLFormItemViewModel *)item index:(NSInteger)index {
     if (self.itemArray.count < index) {
         return;
     }

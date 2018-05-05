@@ -7,16 +7,16 @@
 //
 
 #import "WLFormSectionFooterView.h"
-#import "WLFormSection.h"
+#import "WLFormSectionViewModel.h"
 
 @interface WLFormSectionFooterView()
-@property (nonatomic, strong) WLFormSection *viewModel;
+@property (nonatomic, strong) WLFormSectionViewModel *viewModel;
 @property (nonatomic, strong) UILabel *titleLable;
 @end
 
 @implementation WLFormSectionFooterView
 
-- (instancetype)initWithFrame:(CGRect)frame viewModel:(WLFormSection *)viewModel {
+- (instancetype)initWithFrame:(CGRect)frame viewModel:(WLFormSectionViewModel *)viewModel {
     self = [super initWithFrame:frame];
     if (self) {
         _viewModel = viewModel;

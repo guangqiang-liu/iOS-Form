@@ -1,5 +1,5 @@
 //
-//  WLFormItem.h
+//  WLFormItemViewModel.h
 //  WLForm
 //
 //  Created by 刘光强 on 2018/4/16.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class WLFormSection;
+@class WLFormSectionViewModel;
 
 typedef void(^itemConfigCompletion)(void);
 
@@ -26,7 +26,7 @@ static inline NSDictionary *itemInvalid(NSString *msg) {
              kValidateRetKey: @NO};
 }
 
-@interface WLFormItem : NSObject
+@interface WLFormItemViewModel : NSObject
 
 @property (nonatomic, assign) BOOL hasTopSep;
 @property (nonatomic, assign) CGFloat topSepLineMarginLeft;
@@ -59,7 +59,7 @@ static inline NSDictionary *itemInvalid(NSString *msg) {
 @property (nonatomic, copy) NSDictionary *(^enableValidateBlock)(id value, BOOL didClick);
 @property (nonatomic, copy) NSDictionary *(^disableValidateBlock)(id value, BOOL didClick);
 
-@property (nonatomic, weak) WLFormSection *section;
+@property (nonatomic, weak) WLFormSectionViewModel *section;
 
 - (instancetype)initFormItemWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 

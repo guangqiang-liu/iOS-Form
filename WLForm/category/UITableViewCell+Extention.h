@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class WLFormItem;
+@class WLFormItemViewModel;
 
 @interface UITableViewCell (Extention)
 
-- (void)updateCellSep:(BOOL)isTop isBottom:(BOOL)isBottom viewModel:(WLFormItem *)viewModel;
+- (void)updateCellSep:(BOOL)isTop isBottom:(BOOL)isBottom viewModel:(WLFormItemViewModel *)viewModel;
 - (void)updateCellTouchWithIndexPath:(NSIndexPath *)indexPath target:(id)target action:(SEL)action enable:(BOOL)enable;
 
 @end

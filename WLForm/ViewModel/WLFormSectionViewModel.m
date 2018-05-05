@@ -1,20 +1,20 @@
 //
-//  WLFormSection.m
+//  WLFormSectionViewModel.m
 //  WLForm
 //
 //  Created by 刘光强 on 2018/4/16.
 //  Copyright © 2018年 quangqiang. All rights reserved.
 //
 
-#import "WLFormSection.h"
-#import "WLFormItem.h"
+#import "WLFormSectionViewModel.h"
+#import "WLFormItemViewModel.h"
 
-@interface WLFormSection ()
+@interface WLFormSectionViewModel ()
 
-@property (nonatomic, strong, readwrite) NSMutableArray <WLFormItem *> *itemArray;
+@property (nonatomic, strong, readwrite) NSMutableArray <WLFormItemViewModel *> *itemArray;
 @end
 
-@implementation WLFormSection
+@implementation WLFormSectionViewModel
 
 - (instancetype)init {
     self = [super init];
@@ -36,13 +36,13 @@
     return self;
 }
 
-- (void)addItem:(WLFormItem *)item {
+- (void)addItem:(WLFormItemViewModel *)item {
     item.section = self;
     [self.itemArray addObject:item];
 }
 
-- (void)addItemWithArray:(NSArray <WLFormItem *> *)itemArray {
-    for (WLFormItem *item in itemArray) {
+- (void)addItemWithArray:(NSArray <WLFormItemViewModel *> *)itemArray {
+    for (WLFormItemViewModel *item in itemArray) {
         [self addItem:item];
     }
 }
@@ -69,7 +69,7 @@
     return _headerHeight != 0 ? _headerHeight : 0;
 }
 
-- (NSMutableArray<WLFormItem *> *)itemArray {
+- (NSMutableArray<WLFormItemViewModel *> *)itemArray {
     if (!_itemArray) {
         _itemArray = [[NSMutableArray alloc] init];
     }

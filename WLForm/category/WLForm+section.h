@@ -7,9 +7,9 @@
 //
 
 #import "WLForm.h"
-@class WLFormSection;
+@class WLFormSectionViewModel;
 @interface WLForm (section)
 
-- (WLFormSection *)getSectionWithIndex:(NSInteger) index;
-- (void)setSection:(WLFormSection *)section index:(NSInteger)index;
+- (WLFormSectionViewModel *)getSectionWithIndex:(NSInteger) index;
+- (void)setSection:(WLFormSectionViewModel *)section index:(NSInteger)index;
 @end

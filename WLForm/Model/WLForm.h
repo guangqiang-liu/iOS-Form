@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class WLFormSection, WLFormItem;
+@class WLFormSectionViewModel, WLFormItemViewModel;
 
 static NSString *const kLeftKey = @"kLeftKey";          // 标记左侧内容
 static NSString *const kRightKey = @"kRightKey";        // 标记右侧内容
@@ -18,14 +18,14 @@ static NSString *const kPlaceholder = @"kPlaceholder";  // 标记textField place
 
 @interface WLForm : NSObject
 
-@property (nonatomic, strong, readonly) NSMutableArray<WLFormSection *> *sectionArray;
+@property (nonatomic, strong, readonly) NSMutableArray<WLFormSectionViewModel *> *sectionArray;
 @property (nonatomic, assign, readonly) NSUInteger count;
 @property (nonatomic, assign) CGFloat itemHeight;
 @property (nonatomic, strong) void(^disableBlock)(WLForm *form);
 
-- (void)addSection:(WLFormSection *)section;
+- (void)addSection:(WLFormSectionViewModel *)section;
 
-- (void)removeSection:(WLFormSection *)section;
+- (void)removeSection:(WLFormSectionViewModel *)section;
 
 - (void)reformResRet:(id)res;
 
@@ -33,8 +33,8 @@ static NSString *const kPlaceholder = @"kPlaceholder";  // 标记textField place
 
 - (NSDictionary *)validateItems;
 
-- (WLFormItem *)itemWithIndexPath:(NSIndexPath *)indexPath;
+- (WLFormItemViewModel *)itemWithIndexPath:(NSIndexPath *)indexPath;
 
-- (NSIndexPath *)indexPathWithItem:(WLFormItem *) item;
+- (NSIndexPath *)indexPathWithItem:(WLFormItemViewModel *) item;
 
 @end

@@ -7,18 +7,18 @@
 //
 
 #import "WLForm+section.h"
-#import "WLFormSection.h"
+#import "WLFormSectionViewModel.h"
 
 @implementation WLForm (section)
 
-- (WLFormSection *)getSectionWithIndex:(NSInteger) index {
+- (WLFormSectionViewModel *)getSectionWithIndex:(NSInteger) index {
     if (self.sectionArray.count > index) {
         return self.sectionArray[index];
     }
     return nil;
 }
 
-- (void)setSection:(WLFormSection *)section index:(NSInteger)index {
+- (void)setSection:(WLFormSectionViewModel *)section index:(NSInteger)index {
     if (self.sectionArray.count < index) {
         return;
     }

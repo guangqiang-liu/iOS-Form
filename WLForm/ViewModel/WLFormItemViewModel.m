@@ -1,20 +1,20 @@
 //
-//  WLFormItem.m
+//  WLFormItemViewModel.m
 //  WLForm
 //
 //  Created by 刘光强 on 2018/4/16.
 //  Copyright © 2018年 quangqiang. All rights reserved.
 //
 
-#import "WLFormItem.h"
+#import "WLFormItemViewModel.h"
 
 NSString *kValidateRetKey = @"kValidateRetKey";
 NSString *kValidateMsgKey = @"kValidateMsgKey";
 
-@interface WLFormItem()
+@interface WLFormItemViewModel()
 @end
 
-@implementation WLFormItem
+@implementation WLFormItemViewModel
 
 - (instancetype)initFormItemWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super init];

@@ -1,5 +1,5 @@
 //
-//  WLFormSection.h
+//  WLFormSectionViewModel.h
 //  WLForm
 //
 //  Created by 刘光强 on 2018/4/16.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class WLFormItem;
+@class WLFormItemViewModel;
 
-@interface WLFormSection : NSObject
+@interface WLFormSectionViewModel : NSObject
 
 /// sectionHeader
 @property (nonatomic, copy) NSString *headerTitle;
@@ -41,10 +41,10 @@
 @property (nonatomic, strong) UIColor *footerTopSepLineColor;
 
 @property (nonatomic, assign, getter=isHidden) BOOL hidden;
-@property (nonatomic, strong, readonly) NSMutableArray<WLFormItem *> *itemArray;
+@property (nonatomic, strong, readonly) NSMutableArray<WLFormItemViewModel *> *itemArray;
 @property (nonatomic, assign, readonly) NSUInteger count;
 
-- (void)addItem:(WLFormItem *)item;
-- (void)addItemWithArray:(NSArray<WLFormItem *> *)itemArray;
+- (void)addItem:(WLFormItemViewModel *)item;
+- (void)addItemWithArray:(NSArray<WLFormItemViewModel *> *)itemArray;
 
 @end

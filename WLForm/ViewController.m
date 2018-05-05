@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "WLFormItem.h"
-#import "WLFormSection.h"
+#import "WLFormItemViewModel.h"
+#import "WLFormSectionViewModel.h"
 #import "WLForm.h"
 #import "WLFormTextInputCell.h"
 #import "GenderPickerViewVC.h"
@@ -56,11 +56,11 @@
     [self.form addSection:[self moreInfoSection]];
 }
 
-- (WLFormSection *)accountSection {
-    WLFormSection *section = nil;
-    WLFormItem *row = nil;
+- (WLFormSectionViewModel *)accountSection {
+    WLFormSectionViewModel *section = nil;
+    WLFormItemViewModel *row = nil;
     
-    section = [[WLFormSection alloc] init];
+    section = [[WLFormSectionViewModel alloc] init];
     section.headerHeight = 50;
     section.sectionHeaderBgColor = [UIColor whiteColor];
     section.headerTitleMarginLeft = 15;
@@ -79,7 +79,7 @@
     [section addItem:row];
     
     dic = @{kLeftKey:@"Password", kPlaceholder:@"请输入Password"};
-    WLFormItem *row1 = [self rowForFieldWithUserInfo:dic];
+    WLFormItemViewModel *row1 = [self rowForFieldWithUserInfo:dic];
     [section addItem:row1];
     
     dic = @{kLeftKey:@"Repeat Password", kPlaceholder:@"请输入Repeat Password"};
@@ -94,12 +94,12 @@
     return section;
 }
 
-- (WLFormSection *)detailSection {
+- (WLFormSectionViewModel *)detailSection {
     
-    WLFormSection *section = nil;
-    WLFormItem *row = nil;
+    WLFormSectionViewModel *section = nil;
+    WLFormItemViewModel *row = nil;
     
-    section = [[WLFormSection alloc] init];
+    section = [[WLFormSectionViewModel alloc] init];
     section.headerHeight = 50;
     section.sectionHeaderBgColor = [UIColor whiteColor];
     section.headerTitleMarginLeft = 15;
@@ -132,12 +132,12 @@
     return section;
 }
 
-- (WLFormSection *)moreInfoSection {
-    WLFormSection *section = nil;
-    WLFormItem *row = nil;
+- (WLFormSectionViewModel *)moreInfoSection {
+    WLFormSectionViewModel *section = nil;
+    WLFormItemViewModel *row = nil;
     NSDictionary *dic = @{};
     
-    section = [[WLFormSection alloc] init];
+    section = [[WLFormSectionViewModel alloc] init];
     
     row = [self rowForStepper];
     [section addItem:row];
@@ -171,9 +171,9 @@
     return section;
 }
 
-- (WLFormItem *)rowForRadio:(NSDictionary *)info {
-    WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormRadioCell"];
+- (WLFormItemViewModel *)rowForRadio:(NSDictionary *)info {
+    WLFormItemViewModel *row = nil;
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormRadioCell"];
     row.cellClass = [WLFormRadioCell class];
     row.itemHeight = 48.f;
     row.itemConfigBlock = ^(WLFormRadioCell *cell, id value, NSIndexPath *indexPath) {
@@ -182,9 +182,9 @@
     return row;
 }
 
-- (WLFormItem *)rowForBottomTip:(NSDictionary *)info {
-    WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomTipCell"];
+- (WLFormItemViewModel *)rowForBottomTip:(NSDictionary *)info {
+    WLFormItemViewModel *row = nil;
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomTipCell"];
     row.cellClass = [WLFormBottomTipCell class];
     row.itemHeight = 54.f;
     row.itemConfigBlock = ^(WLFormBottomTipCell *cell, id value, NSIndexPath *indexPath) {
@@ -193,9 +193,9 @@
     return row;
 }
 
-- (WLFormItem *)rowForBottomButton:(NSDictionary *)info {
-    WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomButtonCell"];
+- (WLFormItemViewModel *)rowForBottomButton:(NSDictionary *)info {
+    WLFormItemViewModel *row = nil;
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomButtonCell"];
     row.cellClass = [WLFormBottomButtonCell class];
     row.itemHeight = 44.f;
     __weak typeof(self) weakSelf = self;
@@ -208,16 +208,16 @@
     return row;
 }
 
-- (WLFormItem *)rowForMoreInfo:(NSDictionary *)info {
-    WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormMoreInfoCell"];
+- (WLFormItemViewModel *)rowForMoreInfo:(NSDictionary *)info {
+    WLFormItemViewModel *row = nil;
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormMoreInfoCell"];
     row.cellClass = [WLFormMoreInfoCell class];
     row.itemHeight = 54.f;
     row.value = info.mutableCopy;
     row.itemConfigBlock = ^(WLFormMoreInfoCell *cell, id value, NSIndexPath *indexPath) {
         cell.leftTitle.text = value[kLeftKey];
         cell.moreInfoBlock = ^{
-            WLFormSection *section = self.form.sectionArray[2];
+            WLFormSectionViewModel *section = self.form.sectionArray[2];
             section.hidden = !section.hidden;
             [self.tableView reloadData];
         };
@@ -225,8 +225,8 @@
     return row;
 }
 
-- (WLFormItem *)rowForGender {
-    WLFormItem *row = nil;
+- (WLFormItemViewModel *)rowForGender {
+    WLFormItemViewModel *row = nil;
     NSDictionary *dic = @{kLeftKey:@"Gender",
                           kRightKey:@"请选择性别",
                           kFlagKey:@YES};
@@ -247,9 +247,9 @@
     return row;
 }
 
-- (WLFormItem *)rowForSelect:(NSDictionary *)info {
-    WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormSelectCell"];
+- (WLFormItemViewModel *)rowForSelect:(NSDictionary *)info {
+    WLFormItemViewModel *row = nil;
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormSelectCell"];
     row.itemHeight = 48;
     row.cellClass = [WLFormSelectCell class];
     row.value = info.mutableCopy;
@@ -260,8 +260,8 @@
     return row;
 }
 
-- (WLFormItem *)rowForBirthDay {
-    WLFormItem *row = nil;
+- (WLFormItemViewModel *)rowForBirthDay {
+    WLFormItemViewModel *row = nil;
     NSDictionary *dic = @{kLeftKey:@"Date of Birth"};
     row = [self rowForFieldWithUserInfo:dic];
     row.disableValidateBlock = ^NSDictionary *(id value, BOOL didClicked) {
@@ -273,9 +273,9 @@
     return row;
 }
 
-- (WLFormItem *)rowForStepper {
-    WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"StepperCell"];
+- (WLFormItemViewModel *)rowForStepper {
+    WLFormItemViewModel *row = nil;
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"StepperCell"];
     row.cellClass = [WLFormStepperCell class];
     row.itemHeight = 44.f;
     row.value = @{kLeftKey:@"Age"}.mutableCopy;
@@ -289,9 +289,9 @@
     return row;
 }
 
-- (WLFormItem *)rowForFieldWithUserInfo:(NSDictionary *)userInfo {
-    WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormTextInputCell"];
+- (WLFormItemViewModel *)rowForFieldWithUserInfo:(NSDictionary *)userInfo {
+    WLFormItemViewModel *row = nil;
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormTextInputCell"];
     row.itemHeight = 48;
     row.cellClass = [WLFormTextInputCell class];
     row.value = userInfo.mutableCopy;

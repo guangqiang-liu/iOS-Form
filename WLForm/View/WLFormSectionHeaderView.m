@@ -7,10 +7,10 @@
 //
 
 #import "WLFormSectionHeaderView.h"
-#import "WLFormSection.h"
+#import "WLFormSectionViewModel.h"
 
 @interface WLFormSectionHeaderView()
-@property (nonatomic, strong) WLFormSection *viewModel;
+@property (nonatomic, strong) WLFormSectionViewModel *viewModel;
 @property (nonatomic, strong) UILabel *titleLable;
 @property (nonatomic, strong) UIView *topSepLine;
 
@@ -18,7 +18,7 @@
 
 @implementation WLFormSectionHeaderView
 
-- (instancetype)initWithFrame:(CGRect)frame viewModel:(WLFormSection *)viewModel {
+- (instancetype)initWithFrame:(CGRect)frame viewModel:(WLFormSectionViewModel *)viewModel {
     self = [super initWithFrame:frame];
     if (self) {
         _viewModel = viewModel;

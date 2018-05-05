@@ -8,8 +8,8 @@
 
 #import "WLFormVC.h"
 #import "WLForm.h"
-#import "WLFormSection.h"
-#import "WLFormItem.h"
+#import "WLFormSectionViewModel.h"
+#import "WLFormItemViewModel.h"
 #import "UITableViewCell+Extention.h"
 #import "WLFormSectionHeaderView.h"
 #import "WLFormSectionFooterView.h"
@@ -29,23 +29,23 @@
 #pragma mark - TableView DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSInteger count = 0;
-    for (WLFormSection *section in self.form.sectionArray) {
+    for (WLFormSectionViewModel *section in self.form.sectionArray) {
         if (!section.isHidden) count ++;
     }
     return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    WLFormSection *viewModel = self.form.sectionArray[section];
+    WLFormSectionViewModel *viewModel = self.form.sectionArray[section];
     NSInteger count = 0;
-    for (WLFormItem *item in viewModel.itemArray) {
+    for (WLFormItemViewModel *item in viewModel.itemArray) {
         if (!item.isHidden) count ++;
     }
     return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    WLFormItem *item = [self.form itemWithIndexPath:indexPath];
+    WLFormItemViewModel *item = [self.form itemWithIndexPath:indexPath];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:item.reuseIdentifier];
     if (!cell) {
         if (item.cellClass) {
@@ -69,40 +69,40 @@
 
 #pragma mark - TableView Delegate
 - (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    WLFormItem *item = [self.form itemWithIndexPath:indexPath];
+    WLFormItemViewModel *item = [self.form itemWithIndexPath:indexPath];
     [cell updateCellSep:item.hasTopSep isBottom:item.hasBottomSep viewModel:item];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    WLFormItem *item = [self.form itemWithIndexPath:indexPath];
+    WLFormItemViewModel *item = [self.form itemWithIndexPath:indexPath];
     return item.itemHeight == 0 ? UITableViewAutomaticDimension : item.itemHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    WLFormSection *viewModel = self.form.sectionArray[section];
+    WLFormSectionViewModel *viewModel = self.form.sectionArray[section];
     return viewModel.headerHeight;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    WLFormSection *viewModel = self.form.sectionArray[section];
+    WLFormSectionViewModel *viewModel = self.form.sectionArray[section];
     return viewModel.footerHeight;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    WLFormSection *viewModel = self.form.sectionArray[section];
+    WLFormSectionViewModel *viewModel = self.form.sectionArray[section];
     WLFormSectionHeaderView *view = [[WLFormSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, viewModel.headerHeight) viewModel:viewModel];
     return view;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    WLFormSection *viewModel = self.form.sectionArray[section];
+    WLFormSectionViewModel *viewModel = self.form.sectionArray[section];
     WLFormSectionFooterView *view = [[WLFormSectionFooterView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, viewModel.footerHeight) viewModel:viewModel];
     return view;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    WLFormItem *item = [self.form itemWithIndexPath:indexPath];
+    WLFormItemViewModel *item = [self.form itemWithIndexPath:indexPath];
     !item.didSelectBlock ?: item.didSelectBlock(indexPath, item.value);
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     !item.didSelectCellBlock ?: item.didSelectCellBlock(indexPath, item.value, cell);
@@ -113,7 +113,7 @@
     [self.view addSubview:self.tableView];
 }
 
-- (void)handleEnableWithCell:(UITableViewCell *)cell item:(WLFormItem *)item indexPath:(NSIndexPath *)indexPath {
+- (void)handleEnableWithCell:(UITableViewCell *)cell item:(WLFormItemViewModel *)item indexPath:(NSIndexPath *)indexPath {
     BOOL enable = YES;
     if (self.form.disableBlock) {
         enable = NO;
@@ -132,7 +132,7 @@
 - (void)disableClick:(UIButton *)button {
     UITableViewCell *cell = (UITableViewCell *)[button subviews];
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    WLFormItem *item = [self.form itemWithIndexPath:indexPath];
+    WLFormItemViewModel *item = [self.form itemWithIndexPath:indexPath];
     if (item.disableValidateBlock) {
         NSNumber *num = item.disableValidateBlock(item.value, NO)[kValidateRetKey];
         BOOL enable = num.boolValue;
