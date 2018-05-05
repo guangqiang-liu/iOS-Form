@@ -45,6 +45,6 @@
 @property (nonatomic, assign, readonly) NSUInteger count;
 
 - (void)addItem:(WLFormItem *)item;
-- (void)addItemWithArray:(NSArray <WLFormItem *> *)itemArray;
+- (void)addItemWithArray:(NSArray<WLFormItem *> *)itemArray;
 
 @end

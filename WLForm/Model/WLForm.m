@@ -12,7 +12,7 @@
 
 @interface WLForm ()
 
-@property (nonatomic, strong, readwrite) NSMutableArray <WLFormSection *> *sectionArray;
+@property (nonatomic, strong, readwrite) NSMutableArray<WLFormSection *> *sectionArray;
 @end
 
 @implementation WLForm

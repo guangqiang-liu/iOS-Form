@@ -33,7 +33,7 @@ static const CGFloat kFieldWidth = 150.f;
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    CGSize leftTitleSize = [self.leftlabel sizeForTitle:self.leftlabel.text withFont:H14];
+    CGSize leftTitleSize = [self.leftlabel sizeWithText:self.leftlabel.text font:H14];
     self.leftlabel.frame = CGRectMake(15, 0, self.contentView.frame.size.width, self.contentView.frame.size.height);
     CGFloat padding = 10;
     self.rightField.frame = CGRectMake(leftTitleSize.width + 30, padding, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15), self.contentView.frame.size.height - 2 * padding);

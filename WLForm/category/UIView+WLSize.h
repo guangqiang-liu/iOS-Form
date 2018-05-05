@@ -10,5 +10,5 @@
 
 @interface UIView (WLSize)
 
-- (CGSize)sizeForTitle:(NSString *)title withFont:(UIFont *)font;
+- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font;
 @end

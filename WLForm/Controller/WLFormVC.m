@@ -55,7 +55,7 @@
         }
         !item.cellExtraInitBlock ?: item.cellExtraInitBlock(cell, item.value, indexPath);
     }
-    NSAssert(!(item.itemConfigBlockWithCompletion && item.itemConfigBlock), @"row config block 二选一");
+    NSAssert(!(item.itemConfigBlockWithCompletion && item.itemConfigBlock), @"参数配置不正确！");
     itemConfigCompletion completion = nil;
     if (item.itemConfigBlock) {
         item.itemConfigBlock(cell, item.value, indexPath);
@@ -141,9 +141,7 @@
             return;
         }
     }
-    if (self.form.disableBlock) {
-        self.form.disableBlock(self.form);
-    }
+    !self.form.disableBlock ?: self.form.disableBlock(self.form);
 }
 
 #pragma mark - getter\setter

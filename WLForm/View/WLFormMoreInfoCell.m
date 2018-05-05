@@ -52,7 +52,7 @@
 - (UILabel *)leftTitle {
     if (!_leftTitle) {
         _leftTitle = [[UILabel alloc] init];
-        CGSize titleSize = [_leftTitle sizeForTitle:@"更多信息（选填）" withFont:H14];
+        CGSize titleSize = [_leftTitle sizeWithText:@"更多信息（选填）" font:H14];
         _leftTitle.frame = CGRectMake(15, (54 - titleSize.height) / 2 + 5, SCREEN_WIDTH, titleSize.height);
         _leftTitle.textColor = HexRGB(0x999999);
         _leftTitle.font = H14;

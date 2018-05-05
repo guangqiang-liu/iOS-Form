@@ -33,8 +33,8 @@
     [self setupViews];
     [self configForm];
     
-    [self.form reformResRet:@{@"name":@"xx",@"sex":@"pp"}];
-    [self.tableView reloadData];
+//    [self.form reformResRet:@{@"name":@"xx",@"sex":@"pp"}];
+//    [self.tableView reloadData];
 }
 
 #pragma mark - event response
@@ -173,7 +173,7 @@
 
 - (WLFormItem *)rowForRadio:(NSDictionary *)info {
     WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormRadioCell"];
+    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormRadioCell"];
     row.cellClass = [WLFormRadioCell class];
     row.itemHeight = 48.f;
     row.itemConfigBlock = ^(WLFormRadioCell *cell, id value, NSIndexPath *indexPath) {
@@ -184,7 +184,7 @@
 
 - (WLFormItem *)rowForBottomTip:(NSDictionary *)info {
     WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomTipCell"];
+    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomTipCell"];
     row.cellClass = [WLFormBottomTipCell class];
     row.itemHeight = 54.f;
     row.itemConfigBlock = ^(WLFormBottomTipCell *cell, id value, NSIndexPath *indexPath) {
@@ -195,7 +195,7 @@
 
 - (WLFormItem *)rowForBottomButton:(NSDictionary *)info {
     WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomButtonCell"];
+    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomButtonCell"];
     row.cellClass = [WLFormBottomButtonCell class];
     row.itemHeight = 44.f;
     __weak typeof(self) weakSelf = self;
@@ -210,7 +210,7 @@
 
 - (WLFormItem *)rowForMoreInfo:(NSDictionary *)info {
     WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormMoreInfoCell"];
+    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormMoreInfoCell"];
     row.cellClass = [WLFormMoreInfoCell class];
     row.itemHeight = 54.f;
     row.value = info.mutableCopy;
@@ -249,7 +249,7 @@
 
 - (WLFormItem *)rowForSelect:(NSDictionary *)info {
     WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormSelectCell"];
+    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormSelectCell"];
     row.itemHeight = 48;
     row.cellClass = [WLFormSelectCell class];
     row.value = info.mutableCopy;
@@ -275,7 +275,7 @@
 
 - (WLFormItem *)rowForStepper {
     WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"StepperCell"];
+    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"StepperCell"];
     row.cellClass = [WLFormStepperCell class];
     row.itemHeight = 44.f;
     row.value = @{kLeftKey:@"Age"}.mutableCopy;
@@ -291,7 +291,7 @@
 
 - (WLFormItem *)rowForFieldWithUserInfo:(NSDictionary *)userInfo {
     WLFormItem *row = nil;
-    row = [[WLFormItem alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormTextInputCell"];
+    row = [[WLFormItem alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormTextInputCell"];
     row.itemHeight = 48;
     row.cellClass = [WLFormTextInputCell class];
     row.value = userInfo.mutableCopy;

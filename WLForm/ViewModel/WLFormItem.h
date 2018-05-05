@@ -28,8 +28,6 @@ static inline NSDictionary *itemInvalid(NSString *msg) {
 
 @interface WLFormItem : NSObject
 
-@property (nonatomic, assign) CGFloat itemHeight;
-
 @property (nonatomic, assign) BOOL hasTopSep;
 @property (nonatomic, assign) CGFloat topSepLineMarginLeft;
 @property (nonatomic, assign) CGFloat topSepLineMarginRight;
@@ -38,34 +36,31 @@ static inline NSDictionary *itemInvalid(NSString *msg) {
 @property (nonatomic, assign) CGFloat bottomSepLineMarginLeft;
 @property (nonatomic, assign) CGFloat bottomSepLineMarginRight;
 
-@property (nonatomic, assign, getter=isHidden) BOOL hidden;
-
 @property (nonatomic, assign, readonly) UITableViewCellStyle style;
 @property (nonatomic, copy, readonly) NSString *reuseIdentifier;
+@property (nonatomic, assign) CGFloat itemHeight;
+@property (nonatomic, assign, getter=isHidden) BOOL hidden;
 @property (nonatomic, strong) Class cellClass;
 @property (nonatomic, copy) NSString *nibName;
-
 @property (nonatomic, strong) id value;
 @property (nonatomic, copy) NSString *placeholderValue;
 
-@property (nonatomic, strong) void(^itemConfigBlock)(id cell, id calue, NSIndexPath *indexPath);
-@property (nonatomic, strong) itemConfigCompletion(^itemConfigBlockWithCompletion)(id cell, id value, NSIndexPath *indexPath);
+@property (nonatomic, copy) void(^itemConfigBlock)(id cell, id value, NSIndexPath *indexPath);
+@property (nonatomic, copy) itemConfigCompletion(^itemConfigBlockWithCompletion)(id cell, id value, NSIndexPath *indexPath);
 
-@property (nonatomic, strong) void(^cellExtraInitBlock)(id cell, id value, NSIndexPath *indexPath);
+@property (nonatomic, copy) void(^cellExtraInitBlock)(id cell, id value, NSIndexPath *indexPath);
 
 @property (nonatomic, copy) NSDictionary *(^valueValidateBlock)(id value);
-@property (nonatomic, strong) void(^didSelectBlock)(NSIndexPath *indexPath, id value);
-
-@property (nonatomic, strong) void(^didSelectCellBlock)(NSIndexPath *indexPath, id value, id cell);
-@property (nonatomic, strong) void(^reformResRetBlock)(id ret, id value);
-
-@property (nonatomic, strong) id(^requestParamsConfigBlock)(id value);
+@property (nonatomic, copy) void(^didSelectBlock)(NSIndexPath *indexPath, id value);
+@property (nonatomic, copy) void(^didSelectCellBlock)(NSIndexPath *indexPath, id value, id cell);
+@property (nonatomic, copy) void(^reformResRetBlock)(id ret, id value);
+@property (nonatomic, copy) id(^requestParamsConfigBlock)(id value);
 
 @property (nonatomic, copy) NSDictionary *(^enableValidateBlock)(id value, BOOL didClick);
 @property (nonatomic, copy) NSDictionary *(^disableValidateBlock)(id value, BOOL didClick);
 
 @property (nonatomic, weak) WLFormSection *section;
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
+- (instancetype)initFormItemWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

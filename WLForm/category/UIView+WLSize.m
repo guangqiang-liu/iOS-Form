@@ -10,11 +10,11 @@
 
 @implementation UIView (WLSize)
 
-- (CGSize)sizeForTitle:(NSString *)title withFont:(UIFont *)font {
-    CGRect titleRect = [title boundingRectWithSize:CGSizeMake(FLT_MAX, FLT_MAX)
+- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font {
+    CGRect textRect = [text boundingRectWithSize:CGSizeMake(FLT_MAX, FLT_MAX)
                                            options:NSStringDrawingUsesLineFragmentOrigin
                                         attributes:@{NSFontAttributeName:font}
                                            context:nil];
-    return CGSizeMake(titleRect.size.width, titleRect.size.height);
+    return CGSizeMake(textRect.size.width, textRect.size.height);
 }
 @end

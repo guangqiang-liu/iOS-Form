@@ -11,6 +11,6 @@
 @interface WLFormStepperCell : UITableViewCell
 
 @property (nonatomic, copy) void(^stepperBlock)(double newValue);
-- (void)updateValue:(double)value;
 
+- (void)updateValue:(double)value;
 @end

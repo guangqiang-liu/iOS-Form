@@ -84,7 +84,7 @@ static char kWhenTouchedUpBlockKey;
 }
 
 - (UITapGestureRecognizer*)addTapGestureRecognizerWithTaps:(NSUInteger)taps touches:(NSUInteger)touches selector:(SEL)selector {
-    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:selector];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:selector];
     tapGesture.delegate = self;
     tapGesture.numberOfTapsRequired = taps;
     tapGesture.numberOfTouchesRequired = touches;
@@ -93,9 +93,9 @@ static char kWhenTouchedUpBlockKey;
 }
 
 - (void) addRequirementToSingleTapsRecognizer:(UIGestureRecognizer*) recognizer {
-    for (UIGestureRecognizer* gesture in [self gestureRecognizers]) {
+    for (UIGestureRecognizer *gesture in [self gestureRecognizers]) {
         if ([gesture isKindOfClass:[UITapGestureRecognizer class]]) {
-            UITapGestureRecognizer* tapGesture = (UITapGestureRecognizer*) gesture;
+            UITapGestureRecognizer *tapGesture = (UITapGestureRecognizer*) gesture;
             if (tapGesture.numberOfTouchesRequired == 1 && tapGesture.numberOfTapsRequired == 1) {
                 [tapGesture requireGestureRecognizerToFail:recognizer];
             }
@@ -104,9 +104,9 @@ static char kWhenTouchedUpBlockKey;
 }
 
 - (void) addRequiredToDoubleTapsRecognizer:(UIGestureRecognizer*) recognizer {
-    for (UIGestureRecognizer* gesture in [self gestureRecognizers]) {
+    for (UIGestureRecognizer *gesture in [self gestureRecognizers]) {
         if ([gesture isKindOfClass:[UITapGestureRecognizer class]]) {
-            UITapGestureRecognizer* tapGesture = (UITapGestureRecognizer*) gesture;
+            UITapGestureRecognizer *tapGesture = (UITapGestureRecognizer*) gesture;
             if (tapGesture.numberOfTouchesRequired == 2 && tapGesture.numberOfTapsRequired == 1) {
                 [recognizer requireGestureRecognizerToFail:tapGesture];
             }

@@ -40,7 +40,7 @@
 - (void)setRightTitle:(NSString *)rightTitle {
     _rightTitle = rightTitle;
     self.rightLable.text = rightTitle;
-    CGSize leftTitleSize = [self.leftLable sizeForTitle:rightTitle withFont:H14];
+    CGSize leftTitleSize = [self.leftLable sizeWithText:rightTitle font:H14];
     self.leftLable.frame = CGRectMake(15, 0, WIDTH(self.contentView), HEIGHT(self.contentView));
     self.rightLable.frame = CGRectMake(leftTitleSize.width + 30, (48 - leftTitleSize.height) / 2, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15 + 15), leftTitleSize.height);
 }

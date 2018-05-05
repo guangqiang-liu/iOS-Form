@@ -35,16 +35,16 @@
 - (void)setRadioInfo:(NSDictionary *)radioInfo {
     _radioInfo = radioInfo;
     self.leftTitle.text = radioInfo[@"leftTitle"];
-    CGSize leftTitleSize = [self.leftTitle sizeForTitle:radioInfo[@"leftTitle"] withFont:H14];
+    CGSize leftTitleSize = [self.leftTitle sizeWithText:radioInfo[@"leftTitle"] font:H14];
     self.leftTitle.frame = CGRectMake(15, (48 - leftTitleSize.height) / 2 , leftTitleSize.width, leftTitleSize.height);
     
     NSString *rightButtonTitle = radioInfo[@"rightButtonTitle"];
-    CGSize rightButtonSize = [self.rightButton sizeForTitle:rightButtonTitle withFont:H14];
+    CGSize rightButtonSize = [self.rightButton sizeWithText:rightButtonTitle font:H14];
     [self.rightButton setTitle:rightButtonTitle forState:UIControlStateNormal];
     self.rightButton.frame = CGRectMake(SCREEN_WIDTH - 15 - rightButtonSize.width - 24, (48 - 16) / 2 , rightButtonSize.width + 30, 16);
     
     NSString *leftButtonTitle = radioInfo[@"leftButtonTitle"];
-    CGSize leftButtonSize = [self.leftButton sizeForTitle:leftButtonTitle withFont:H14];
+    CGSize leftButtonSize = [self.leftButton sizeWithText:leftButtonTitle font:H14];
     [self.leftButton setTitle:leftButtonTitle forState:UIControlStateNormal];
     self.leftButton.frame = CGRectMake(MinX(self.rightButton) - (leftButtonSize.width + 24 + 24), (48 - 16) / 2, leftButtonSize.width + 30, 16);
 }

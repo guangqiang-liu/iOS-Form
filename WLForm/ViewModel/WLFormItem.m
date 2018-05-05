@@ -16,7 +16,7 @@ NSString *kValidateMsgKey = @"kValidateMsgKey";
 
 @implementation WLFormItem
 
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+- (instancetype)initFormItemWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super init];
     if (self) {
         _style = style;
@@ -31,4 +31,10 @@ NSString *kValidateMsgKey = @"kValidateMsgKey";
     }
     return self;
 }
+
+#ifdef DEBUG
+- (void)dealloc {
+    NSLog(@"row dealloc %@", self);
+}
+#endif
 @end
