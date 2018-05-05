@@ -171,6 +171,29 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		9CEEA5CB209D8B8500673214 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9C2647D3209C49FE004A4551 /* WLFormStepperCell.h */,
+				9C2647D4209C49FE004A4551 /* WLFormStepperCell.m */,
+				9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */,
+				9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */,
+				9C264763209B3E77004A4551 /* WLFormMoreInfoCell.h */,
+				9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */,
+				9C264778209C0021004A4551 /* WLFormRadioCell.h */,
+				9C264779209C0021004A4551 /* WLFormRadioCell.m */,
+				9C26477B209C0039004A4551 /* WLFormCheckboxCell.h */,
+				9C26477C209C0039004A4551 /* WLFormCheckboxCell.m */,
+				9C264775209BFFE3004A4551 /* WLFormBottomTipCell.h */,
+				9C264776209BFFE3004A4551 /* WLFormBottomTipCell.m */,
+				9C2647DD209C66CF004A4551 /* WLFormSelectCell.h */,
+				9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */,
+				9C26477E209C0077004A4551 /* WLFormBottomButtonCell.h */,
+				9C26477F209C0077004A4551 /* WLFormBottomButtonCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9CF3815C2084712C00D81AE3 = {
 			isa = PBXGroup;
 			children = (
@@ -218,22 +241,7 @@
 		9CF3817E2084718C00D81AE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9C2647D3209C49FE004A4551 /* WLFormStepperCell.h */,
-				9C2647D4209C49FE004A4551 /* WLFormStepperCell.m */,
-				9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */,
-				9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */,
-				9C264763209B3E77004A4551 /* WLFormMoreInfoCell.h */,
-				9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */,
-				9C264778209C0021004A4551 /* WLFormRadioCell.h */,
-				9C264779209C0021004A4551 /* WLFormRadioCell.m */,
-				9C26477B209C0039004A4551 /* WLFormCheckboxCell.h */,
-				9C26477C209C0039004A4551 /* WLFormCheckboxCell.m */,
-				9C264775209BFFE3004A4551 /* WLFormBottomTipCell.h */,
-				9C264776209BFFE3004A4551 /* WLFormBottomTipCell.m */,
-				9C2647DD209C66CF004A4551 /* WLFormSelectCell.h */,
-				9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */,
-				9C26477E209C0077004A4551 /* WLFormBottomButtonCell.h */,
-				9C26477F209C0077004A4551 /* WLFormBottomButtonCell.m */,
+				9CEEA5CB209D8B8500673214 /* Cell */,
 				9C264756209B08B3004A4551 /* WLFormSectionHeaderView.h */,
 				9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */,
 				9C264759209B08D3004A4551 /* WLFormSectionFooterView.h */,

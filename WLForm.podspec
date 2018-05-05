@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WLForm'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '自定义通用表单组件'
 
 # This description is used to generate tags and improve search results.
@@ -26,9 +26,13 @@ Pod::Spec.new do |s|
 
   s.prefix_header_file = "WLForm/WLForm.pch"
 
+  s.default_subspec = 'Code'
+
   s.subspec 'Code' do |ss|
-        ss.source_files = "WLForm/category/**/*.{h,m}", "WLForm/Controller/**/*.{h,m}", "WLForm/Model/**/*.{h,m}", "WLForm/View/**/*.{h,m}", "WLForm/ViewModel/**/*.{h,m}"
+        ss.source_files = "WLForm/category/**/*.{h,m}", "WLForm/Controller/**/*.{h,m}", "WLForm/Model/**/*.{h,m}", "WLForm/View/**/*.{h,m}", "WLForm/ViewModel/**/*.{h,m}", "WLForm/Tool/**/*.{h,m}"
     end
+
+  s.resources = "WLForm/Resource/*.png"
   
   # s.frameworks = 'UIKit', 'MapKit', 'Foundation'
   s.dependency 'IQKeyboardManager'
