@@ -35,8 +35,8 @@
 - (void)setRadioInfo:(NSDictionary *)radioInfo {
     _radioInfo = radioInfo;
     self.leftTitle.text = radioInfo[@"leftTitle"];
-    CGSize leftTitleSize = [self.leftTitle sizeWithText:radioInfo[@"leftTitle"] font:H14];
-    self.leftTitle.frame = CGRectMake(15, (48 - leftTitleSize.height) / 2 , leftTitleSize.width, leftTitleSize.height);
+//    CGSize leftTitleSize = [self.leftTitle sizeWithText:radioInfo[@"leftTitle"] font:H14];
+    self.leftTitle.frame = CGRectMake(15, 0, 135, 48);
     
     NSString *rightButtonTitle = radioInfo[@"rightButtonTitle"];
     CGSize rightButtonSize = [self.rightButton sizeWithText:rightButtonTitle font:H14];
@@ -46,7 +46,7 @@
     NSString *leftButtonTitle = radioInfo[@"leftButtonTitle"];
     CGSize leftButtonSize = [self.leftButton sizeWithText:leftButtonTitle font:H14];
     [self.leftButton setTitle:leftButtonTitle forState:UIControlStateNormal];
-    self.leftButton.frame = CGRectMake(MinX(self.rightButton) - (leftButtonSize.width + 24 + 24), (48 - 16) / 2, leftButtonSize.width + 30, 16);
+    self.leftButton.frame = CGRectMake(MinX(self.rightButton) - (leftButtonSize.width + 24 + 15), (48 - 16) / 2, leftButtonSize.width + 30, 16);
 }
 
 - (void)leftButtonClick:(UIButton *)button {
@@ -64,6 +64,7 @@
         _leftTitle = [[UILabel alloc] init];
         _leftTitle.textColor = HexRGB(0x999999);
         _leftTitle.font = H14;
+        _leftTitle.numberOfLines = 2;
     }
     return _leftTitle;
 }

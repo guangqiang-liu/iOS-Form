@@ -23,6 +23,7 @@
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = bgColor;
     [self renderViews];
 }
 
@@ -53,6 +54,7 @@
         } else {
             cell = [[[NSBundle mainBundle] loadNibNamed:item.nibName owner:nil options:nil] lastObject];
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         !item.cellExtraInitBlock ?: item.cellExtraInitBlock(cell, item.value, indexPath);
     }
     NSAssert(!(item.itemConfigBlockWithCompletion && item.itemConfigBlock), @"参数配置不正确！");
@@ -102,9 +104,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     WLFormItemViewModel *item = [self.form itemWithIndexPath:indexPath];
     !item.didSelectBlock ?: item.didSelectBlock(indexPath, item.value);
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     !item.didSelectCellBlock ?: item.didSelectCellBlock(indexPath, item.value, cell);
 }
 
@@ -147,7 +149,7 @@
 #pragma mark - getter\setter
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 48) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = UITableViewAutomaticDimension;

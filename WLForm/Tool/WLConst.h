@@ -52,7 +52,8 @@
 #define WLSectionHeaderBgColor [UIColor whiteColor]
 #define WLSectionFooterBgColor [UIColor grayColor]
 
-#define UIImageName(x) [UIImage imageNamed:x]
+#define SELF_BUNDLE [NSBundle bundleForClass:[self class]]
+#define UIImageName(x) [UIImage imageNamed:x inBundle:SELF_BUNDLE compatibleWithTraitCollection:nil]
 
 #define WEAK_SELF __weak typeof(self) weakSelf = self
 #define STRONG_SELF __strong typeof(weakSelf) self = weakSelf

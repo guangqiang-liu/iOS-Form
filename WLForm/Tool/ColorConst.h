@@ -35,7 +35,7 @@
 #define magenta_color   [UIColor magentaColor]
 
 /// 项目默认颜色值
-#define bgColor HexRGB(0xEEEEEE)
+#define bgColor HexRGB(0xFAF9F9)
 #define sepLineColor HexRGB(0xEFEFF5)
 #define themeColor  HexRGB(0x7442ea)
 #define textcolor RGBCOLOR(83,83,83)

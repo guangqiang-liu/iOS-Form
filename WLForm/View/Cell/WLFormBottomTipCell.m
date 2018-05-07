@@ -31,20 +31,19 @@
 
 - (void)setTipStr:(NSString *)tipStr {
     _tipStr = tipStr;
-    
     self.tipLable.text = tipStr;
-    [self.tipLable sizeToFit];
 }
 
 - (UILabel *)tipLable {
     if (!_tipLable) {
         _tipLable = [[UILabel alloc] init];
-        _tipLable.frame = CGRectMake(20, 10, SCREEN_WIDTH - 40, 20);
+        _tipLable.frame = CGRectMake(20, 0, SCREEN_WIDTH - 40, HEIGHT(self.contentView));
         _tipLable.textColor = HexRGB(0x999999);
         _tipLable.font = H12;
         _tipLable.numberOfLines = 2;
+        _tipLable.textAlignment = NSTextAlignmentCenter;
         [_tipLable whenTapped:^{
-            NSLog(@"点击了提示文字");
+            !_tipBlock ?: _tipBlock();
         }];
     }
     return _tipLable;

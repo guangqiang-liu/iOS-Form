@@ -54,7 +54,7 @@
         _leftTitle = [[UILabel alloc] init];
         CGSize titleSize = [_leftTitle sizeWithText:@"更多信息（选填）" font:H14];
         _leftTitle.frame = CGRectMake(15, (54 - titleSize.height) / 2 + 5, SCREEN_WIDTH, titleSize.height);
-        _leftTitle.textColor = HexRGB(0x999999);
+        _leftTitle.textColor = HexRGB(0x434343);
         _leftTitle.font = H14;
         [_leftTitle whenTapped:^{
             [self foldClick];
