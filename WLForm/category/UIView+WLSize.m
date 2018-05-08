@@ -17,4 +17,13 @@
                                            context:nil];
     return CGSizeMake(textRect.size.width, textRect.size.height);
 }
+
+- (CGFloat)calculateHeightWithString:(NSString *)string width:(CGFloat)width font:(UIFont *)font spacing:(NSInteger)spacing {
+    CGSize size = CGSizeMake(width, 2000);
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    [style setLineSpacing:spacing];
+    NSDictionary *dic = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:style};
+    CGFloat height = [string boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dic context:nil].size.height;
+    return height;
+}
 @end

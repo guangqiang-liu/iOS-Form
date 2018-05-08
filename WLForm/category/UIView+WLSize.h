@@ -11,4 +11,6 @@
 @interface UIView (WLSize)
 
 - (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font;
+
+- (CGFloat)calculateHeightWithString:(NSString *)string width:(CGFloat)width font:(UIFont *)font spacing:(NSInteger)spacing;
 @end
