@@ -195,7 +195,7 @@
 			children = (
 				9C2647CB209C3CDE004A4551 /* Resource */,
 				9C264754209AFEBF004A4551 /* Tool */,
-				9CF3818E208479BE00D81AE3 /* category */,
+				9CF3818E208479BE00D81AE3 /* Category */,
 				9CF3817F2084718C00D81AE3 /* Controller */,
 				9CF381802084718C00D81AE3 /* Model */,
 				9CF3817E2084718C00D81AE3 /* View */,
@@ -258,7 +258,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		9CF3818E208479BE00D81AE3 /* category */ = {
+		9CF3818E208479BE00D81AE3 /* Category */ = {
 			isa = PBXGroup;
 			children = (
 				9CF3819220847ABD00D81AE3 /* WLFormSectionViewModel+row.h */,
@@ -268,7 +268,7 @@
 				9CF3819B20849A0800D81AE3 /* UITableViewCell+Extention.h */,
 				9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */,
 			);
-			path = category;
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

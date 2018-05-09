@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.default_subspec = 'Code'
 
   s.subspec 'Code' do |ss|
-        ss.source_files = "WLForm/category/**/*.{h,m}", "WLForm/Controller/**/*.{h,m}", "WLForm/Model/**/*.{h,m}", "WLForm/View/**/*.{h,m}", "WLForm/ViewModel/**/*.{h,m}", "WLForm/Tool/**/*.{h,m}"
+        ss.source_files = "WLForm/category/**/*.{h,m}", "WLForm/Controller/**/*.{h,m}", "WLForm/Model/**/*.{h,m}", "WLForm/View/**/*.{h,m}", "WLForm/ViewModel/**/*.{h,m}"
     end
 
   s.resources = "WLForm/Resource/*.png"
