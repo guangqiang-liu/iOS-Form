@@ -1,5 +1,5 @@
 PODS:
-  - IQKeyboardManager (6.0.0)
+  - IQKeyboardManager (6.0.2)
   - WLWidget (0.0.4):
     - WLWidget/Category (= 0.0.4)
     - WLWidget/Macro (= 0.0.4)
@@ -11,7 +11,7 @@ DEPENDENCIES:
   - WLWidget
 
 SPEC CHECKSUMS:
-  IQKeyboardManager: fdba62488e23c48a3fa8591635aff166ed946632
+  IQKeyboardManager: c49d59e358aeeffaa0280aa305093c2b194d2607
   WLWidget: 29f38795f8c2a0d77532f0a84ef49017bc2f2f87
 
 PODFILE CHECKSUM: 5ddc1798b48f12859ccbf7b8a09a7c6a627cddbd

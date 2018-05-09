@@ -36,5 +36,6 @@ Pod::Spec.new do |s|
   
   # s.frameworks = 'UIKit', 'MapKit', 'Foundation'
   s.dependency 'IQKeyboardManager'
+  s.dependency 'WLWidget'
 
 end
