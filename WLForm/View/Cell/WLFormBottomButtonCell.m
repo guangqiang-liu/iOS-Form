@@ -19,7 +19,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = clear_color;
+        self.backgroundColor = purple_color;
         [self renderViews];
     }
     return self;
@@ -43,7 +43,7 @@
 - (UIButton *)button {
     if (!_button) {
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
-        _button.frame = CGRectMake(15, 0, SCREEN_WIDTH - 30, 44);
+        _button.frame = CGRectMake(15, 16, SCREEN_WIDTH - 30, 44);
         [_button setTitleColor:white_color forState:UIControlStateNormal];
         _button.titleLabel.font = H18;
         _button.layer.cornerRadius = 4;

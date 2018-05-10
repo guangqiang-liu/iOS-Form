@@ -32,6 +32,8 @@
 - (void)setTipStr:(NSString *)tipStr {
     _tipStr = tipStr;
     self.tipLable.text = tipStr;
+    CGSize tipSize = [self.tipLable sizeWithText:tipStr font:H12];
+    self.tipLable.frame = CGRectMake(20, 0, SCREEN_WIDTH - 40, tipSize.height + 32);
 }
 
 - (UILabel *)tipLable {
@@ -42,6 +44,7 @@
         _tipLable.font = H12;
         _tipLable.numberOfLines = 2;
         _tipLable.textAlignment = NSTextAlignmentCenter;
+        _tipLable.backgroundColor = red_color;
         [_tipLable whenTapped:^{
             !_tipBlock ?: _tipBlock();
         }];
