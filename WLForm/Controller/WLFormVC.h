@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WLBaseViewController.h"
 
 @class WLForm;
 

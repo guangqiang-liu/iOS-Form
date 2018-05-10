@@ -19,4 +19,5 @@
 #import "UIView+WLGestureBlock.h"
 #import "IQKeyboardManager.h"
 
+#import "WLBaseViewController.h"
 #endif /* WLForm_pch */
