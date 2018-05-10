@@ -32,7 +32,6 @@
     
     [self setupViews];
     [self configForm];
-    
 //    [self.form reformResRet:@{@"name":@"xx",@"sex":@"pp"}];
 //    [self.tableView reloadData];
 }

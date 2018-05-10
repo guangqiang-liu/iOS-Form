@@ -1,10 +1,10 @@
 PODS:
   - IQKeyboardManager (6.0.2)
   - ReactiveObjC (3.1.0)
-  - WLBaseView (0.1.6):
+  - WLBaseView (0.1.8):
     - ReactiveObjC
-    - WLBaseView/Code (= 0.1.6)
-  - WLBaseView/Code (0.1.6):
+    - WLBaseView/Code (= 0.1.8)
+  - WLBaseView/Code (0.1.8):
     - ReactiveObjC
   - WLWidget (0.0.5):
     - WLWidget/Category (= 0.0.5)
@@ -20,7 +20,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   IQKeyboardManager: c49d59e358aeeffaa0280aa305093c2b194d2607
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
-  WLBaseView: 3b9acdf6c1b701617e38b6a2d94c86d705688954
+  WLBaseView: 0713aafe4014c6fc7694f15c89fbb5f13526744b
   WLWidget: 8a84e7c918b1873f4cbb6b7c250c543b5012feb8
 
 PODFILE CHECKSUM: e3d859d12181afdab0bab76e60ba6c5462431cb6
