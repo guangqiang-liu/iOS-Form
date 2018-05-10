@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class WLForm;
 
 @interface WLFormVC : WLBaseViewController

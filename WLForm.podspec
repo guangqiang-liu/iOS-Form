@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WLForm'
-  s.version          = '0.1.0'
+  s.version          = '0.0.9'
   s.summary          = '自定义通用表单组件'
 
 # This description is used to generate tags and improve search results.
@@ -34,8 +34,8 @@ Pod::Spec.new do |s|
 
   s.resources = "WLForm/Resource/*.png"
   
-  # s.frameworks = 'UIKit', 'MapKit', 'Foundation'
   s.dependency 'IQKeyboardManager'
   s.dependency 'WLWidget'
+  s.dependency 'WLBaseView'
 
 end
