@@ -23,8 +23,6 @@
 #pragma mark - lifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = bgColor;
-    [self renderViews];
 }
 
 #pragma mark - TableView DataSource

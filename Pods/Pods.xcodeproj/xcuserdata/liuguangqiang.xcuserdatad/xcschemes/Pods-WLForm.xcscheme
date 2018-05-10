@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "23DE8B75A0A540332A39FCEA34FDB4A0"
+               BlueprintIdentifier = "6EDB434553F7AF9BFCC8D89490E6FFF4"
                BuildableName = "Pods_WLForm.framework"
                BlueprintName = "Pods-WLForm"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "23DE8B75A0A540332A39FCEA34FDB4A0"
+            BlueprintIdentifier = "6EDB434553F7AF9BFCC8D89490E6FFF4"
             BuildableName = "Pods_WLForm.framework"
             BlueprintName = "Pods-WLForm"
             ReferencedContainer = "container:Pods.xcodeproj">

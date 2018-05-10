@@ -154,11 +154,6 @@
     row.bottomSepLineMarginLeft = 0;
     [section addItem:row];
     
-    dic = @{kLeftKey:@"提交"};
-    row = [self rowForBottomButton:dic];
-    row.bottomSepLineMarginLeft = 0;
-    [section addItem:row];
-    
     dic = @{@"leftTitle":@"税控盘类型", @"leftButtonTitle":@"航信金税盘", @"rightButtonTitle":@"百望税控盘"};
     row = [self rowForRadio:dic];
     row.bottomSepLineMarginLeft = 0;
@@ -166,6 +161,11 @@
     
     dic = @{@"leftTitle":@"是否已开通电子发票业务", @"leftButtonTitle":@"未开通", @"rightButtonTitle":@"已开通"};
     row = [self rowForRadio:dic];
+    row.bottomSepLineMarginLeft = 0;
+    [section addItem:row];
+    
+    dic = @{kLeftKey:@"提交"};
+    row = [self rowForBottomButton:dic];
     row.bottomSepLineMarginLeft = 0;
     [section addItem:row];
     return section;
@@ -197,7 +197,7 @@
     WLFormItemViewModel *row = nil;
     row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomButtonCell"];
     row.cellClass = [WLFormBottomButtonCell class];
-    row.itemHeight = 44.f;
+    row.itemHeight = 78.f;
     __weak typeof(self) weakSelf = self;
     row.itemConfigBlock = ^(WLFormBottomButtonCell *cell, id value, NSIndexPath *indexPath) {
         cell.title = info[kLeftKey];

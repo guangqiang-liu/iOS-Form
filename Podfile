@@ -11,4 +11,6 @@ target 'WLForm' do
   # Pods for WLForm
   pod 'IQKeyboardManager'
   pod 'WLWidget'
+  pod 'WLBaseView'
+
 end

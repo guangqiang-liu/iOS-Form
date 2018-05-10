@@ -1,19 +1,28 @@
 PODS:
   - IQKeyboardManager (6.0.2)
-  - WLWidget (0.0.4):
-    - WLWidget/Category (= 0.0.4)
-    - WLWidget/Macro (= 0.0.4)
-  - WLWidget/Category (0.0.4)
-  - WLWidget/Macro (0.0.4)
+  - ReactiveObjC (3.1.0)
+  - WLBaseView (0.1.5):
+    - ReactiveObjC
+    - WLBaseView/Code (= 0.1.5)
+  - WLBaseView/Code (0.1.5):
+    - ReactiveObjC
+  - WLWidget (0.0.5):
+    - WLWidget/Category (= 0.0.5)
+    - WLWidget/Macro (= 0.0.5)
+  - WLWidget/Category (0.0.5)
+  - WLWidget/Macro (0.0.5)
 
 DEPENDENCIES:
   - IQKeyboardManager
+  - WLBaseView
   - WLWidget
 
 SPEC CHECKSUMS:
   IQKeyboardManager: c49d59e358aeeffaa0280aa305093c2b194d2607
-  WLWidget: 29f38795f8c2a0d77532f0a84ef49017bc2f2f87
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
+  WLBaseView: b6d98d56981bfd23e776f3cb6e4ed48d8a65a2f1
+  WLWidget: 8a84e7c918b1873f4cbb6b7c250c543b5012feb8
 
-PODFILE CHECKSUM: 5ddc1798b48f12859ccbf7b8a09a7c6a627cddbd
+PODFILE CHECKSUM: e3d859d12181afdab0bab76e60ba6c5462431cb6
 
 COCOAPODS: 1.4.0
