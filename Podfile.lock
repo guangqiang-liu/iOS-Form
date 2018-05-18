@@ -11,29 +11,21 @@ PODS:
   - WLBaseView/Code (0.2.0):
     - ReactiveObjC
   - WLIconFont (0.1.6)
-  - WLWidget (0.0.5):
+  - WLWidget (0.0.6):
     - SDWebImage
-    - WLWidget/Category (= 0.0.5)
-    - WLWidget/Macro (= 0.0.5)
-  - WLWidget/Category (0.0.5):
+    - WLWidget/Category (= 0.0.6)
+    - WLWidget/Macro (= 0.0.6)
+  - WLWidget/Category (0.0.6):
     - SDWebImage
-  - WLWidget/Macro (0.0.5):
+  - WLWidget/Macro (0.0.6):
     - SDWebImage
 
 DEPENDENCIES:
   - IQKeyboardManager
   - Masonry
-  - WLBaseView (from `/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLBaseView/WLBaseView.podspec`)
-  - WLIconFont (from `/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLIconFont/WLIconFont.podspec`)
-  - WLWidget (from `/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLWidget/WLWidget.podspec`)
-
-EXTERNAL SOURCES:
-  WLBaseView:
-    :path: /Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLBaseView/WLBaseView.podspec
-  WLIconFont:
-    :path: /Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLIconFont/WLIconFont.podspec
-  WLWidget:
-    :path: /Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLWidget/WLWidget.podspec
+  - WLBaseView
+  - WLIconFont
+  - WLWidget
 
 SPEC CHECKSUMS:
   IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
@@ -42,8 +34,8 @@ SPEC CHECKSUMS:
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   WLBaseView: f470ae54077921395c0fc2b5342d9a3c194762b5
   WLIconFont: 9eae86bae17c9aa455247d11bebd63a39b608edb
-  WLWidget: 0a5d93c2830e870f54299350972d55e7ae3bb2c8
+  WLWidget: ffa26d1d8c28c8c2b4d808299c6878f6c5a4dbb0
 
-PODFILE CHECKSUM: 8796a6711cb6699f93d86acde0e770d4e700a308
+PODFILE CHECKSUM: ee9990a0fb37b325b86226b46a1bcf7fa4f8f3fc
 
 COCOAPODS: 1.4.0
