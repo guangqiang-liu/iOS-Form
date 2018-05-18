@@ -38,5 +38,6 @@ Pod::Spec.new do |s|
   s.dependency 'WLWidget'
   s.dependency 'WLBaseView'
   s.dependency 'WLIconFont'
+  s.dependency 'Masonry'
 
 end
