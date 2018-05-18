@@ -1,28 +1,49 @@
 PODS:
-  - IQKeyboardManager (6.0.2)
+  - IQKeyboardManager (6.0.3)
+  - Masonry (1.1.0)
   - ReactiveObjC (3.1.0)
-  - WLBaseView (0.1.8):
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - WLBaseView (0.2.0):
     - ReactiveObjC
-    - WLBaseView/Code (= 0.1.8)
-  - WLBaseView/Code (0.1.8):
+    - WLBaseView/Code (= 0.2.0)
+  - WLBaseView/Code (0.2.0):
     - ReactiveObjC
+  - WLIconFont (0.1.6)
   - WLWidget (0.0.5):
+    - SDWebImage
     - WLWidget/Category (= 0.0.5)
     - WLWidget/Macro (= 0.0.5)
-  - WLWidget/Category (0.0.5)
-  - WLWidget/Macro (0.0.5)
+  - WLWidget/Category (0.0.5):
+    - SDWebImage
+  - WLWidget/Macro (0.0.5):
+    - SDWebImage
 
 DEPENDENCIES:
   - IQKeyboardManager
-  - WLBaseView
-  - WLWidget
+  - Masonry
+  - WLBaseView (from `/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLBaseView/WLBaseView.podspec`)
+  - WLIconFont (from `/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLIconFont/WLIconFont.podspec`)
+  - WLWidget (from `/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLWidget/WLWidget.podspec`)
+
+EXTERNAL SOURCES:
+  WLBaseView:
+    :path: /Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLBaseView/WLBaseView.podspec
+  WLIconFont:
+    :path: /Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLIconFont/WLIconFont.podspec
+  WLWidget:
+    :path: /Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLWidget/WLWidget.podspec
 
 SPEC CHECKSUMS:
-  IQKeyboardManager: c49d59e358aeeffaa0280aa305093c2b194d2607
+  IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
-  WLBaseView: 0713aafe4014c6fc7694f15c89fbb5f13526744b
-  WLWidget: 8a84e7c918b1873f4cbb6b7c250c543b5012feb8
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  WLBaseView: f470ae54077921395c0fc2b5342d9a3c194762b5
+  WLIconFont: 9eae86bae17c9aa455247d11bebd63a39b608edb
+  WLWidget: 0a5d93c2830e870f54299350972d55e7ae3bb2c8
 
-PODFILE CHECKSUM: e3d859d12181afdab0bab76e60ba6c5462431cb6
+PODFILE CHECKSUM: 8796a6711cb6699f93d86acde0e770d4e700a308
 
 COCOAPODS: 1.4.0

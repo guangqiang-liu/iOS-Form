@@ -37,5 +37,6 @@ Pod::Spec.new do |s|
   s.dependency 'IQKeyboardManager'
   s.dependency 'WLWidget'
   s.dependency 'WLBaseView'
+  s.dependency 'WLIconFont'
 
 end

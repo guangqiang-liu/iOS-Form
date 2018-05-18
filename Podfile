@@ -10,7 +10,9 @@ target 'WLForm' do
   
   # Pods for WLForm
   pod 'IQKeyboardManager'
-  pod 'WLWidget'
-  pod 'WLBaseView'
-
+  pod 'WLWidget', :path => '/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLWidget/WLWidget.podspec'
+  pod 'WLBaseView', :path => '/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLBaseView/WLBaseView.podspec'
+  pod 'WLIconFont', :path => '/Users/liuguangqiang/Desktop/companyRepo/WLPLib/WLIconFont/WLIconFont.podspec'
+  
+  pod 'Masonry'
 end

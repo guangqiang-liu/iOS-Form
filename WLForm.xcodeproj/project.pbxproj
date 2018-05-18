@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C140AAB20ABC45F006E6747 /* WLFormSumTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C140AAA20ABC45F006E6747 /* WLFormSumTextInputCell.m */; };
 		9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */; };
 		9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C26475A209B08D3004A4551 /* WLFormSectionFooterView.m */; };
 		9C264765209B3E77004A4551 /* WLFormMoreInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */; };
@@ -22,6 +23,7 @@
 		9C2647DF209C66CF004A4551 /* WLFormSelectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */; };
 		9C2647E2209C6B81004A4551 /* icon_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647E0209C6B81004A4551 /* icon_arrow@3x.png */; };
 		9C2647E3209C6B81004A4551 /* icon_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C2647E1209C6B81004A4551 /* icon_arrow@2x.png */; };
+		9C855F1220AAB58F0074C6CF /* WLFormBottomTipButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C855F1120AAB58F0074C6CF /* WLFormBottomTipButtonCell.m */; };
 		9CF3816A2084712C00D81AE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381692084712C00D81AE3 /* AppDelegate.m */; };
 		9CF3816D2084712C00D81AE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3816C2084712C00D81AE3 /* ViewController.m */; };
 		9CF381702084712C00D81AE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF3816E2084712C00D81AE3 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		90E9D259BDEF4CB6806655A9 /* Pods-WLForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLForm.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLForm/Pods-WLForm.release.xcconfig"; sourceTree = "<group>"; };
+		9C140AA920ABC45F006E6747 /* WLFormSumTextInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSumTextInputCell.h; sourceTree = "<group>"; };
+		9C140AAA20ABC45F006E6747 /* WLFormSumTextInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSumTextInputCell.m; sourceTree = "<group>"; };
 		9C264756209B08B3004A4551 /* WLFormSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSectionHeaderView.h; sourceTree = "<group>"; };
 		9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSectionHeaderView.m; sourceTree = "<group>"; };
 		9C264759209B08D3004A4551 /* WLFormSectionFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSectionFooterView.h; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSelectCell.m; sourceTree = "<group>"; };
 		9C2647E0209C6B81004A4551 /* icon_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow@3x.png"; sourceTree = "<group>"; };
 		9C2647E1209C6B81004A4551 /* icon_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_arrow@2x.png"; sourceTree = "<group>"; };
+		9C855F1020AAB58F0074C6CF /* WLFormBottomTipButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormBottomTipButtonCell.h; sourceTree = "<group>"; };
+		9C855F1120AAB58F0074C6CF /* WLFormBottomTipButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormBottomTipButtonCell.m; sourceTree = "<group>"; };
 		9CC4FEE920A2A29600232074 /* FormHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormHeader.h; sourceTree = "<group>"; };
 		9CF381652084712C00D81AE3 /* WLForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WLForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF381682084712C00D81AE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 				9C2647D4209C49FE004A4551 /* WLFormStepperCell.m */,
 				9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */,
 				9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */,
+				9C140AA920ABC45F006E6747 /* WLFormSumTextInputCell.h */,
+				9C140AAA20ABC45F006E6747 /* WLFormSumTextInputCell.m */,
 				9C264763209B3E77004A4551 /* WLFormMoreInfoCell.h */,
 				9C264764209B3E77004A4551 /* WLFormMoreInfoCell.m */,
 				9C264778209C0021004A4551 /* WLFormRadioCell.h */,
@@ -164,6 +172,8 @@
 				9C26477C209C0039004A4551 /* WLFormCheckboxCell.m */,
 				9C264775209BFFE3004A4551 /* WLFormBottomTipCell.h */,
 				9C264776209BFFE3004A4551 /* WLFormBottomTipCell.m */,
+				9C855F1020AAB58F0074C6CF /* WLFormBottomTipButtonCell.h */,
+				9C855F1120AAB58F0074C6CF /* WLFormBottomTipButtonCell.m */,
 				9C2647DD209C66CF004A4551 /* WLFormSelectCell.h */,
 				9C2647DE209C66CF004A4551 /* WLFormSelectCell.m */,
 				9C26477E209C0077004A4551 /* WLFormBottomButtonCell.h */,
@@ -373,15 +383,21 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WLForm/Pods-WLForm-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/WLBaseView/WLBaseView.framework",
+				"${BUILT_PRODUCTS_DIR}/WLIconFont/WLIconFont.framework",
 				"${BUILT_PRODUCTS_DIR}/WLWidget/WLWidget.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WLBaseView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WLIconFont.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WLWidget.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +444,9 @@
 				9CF3818A208472EA00D81AE3 /* WLFormItemViewModel.m in Sources */,
 				9C2647DF209C66CF004A4551 /* WLFormSelectCell.m in Sources */,
 				9C26477A209C0021004A4551 /* WLFormRadioCell.m in Sources */,
+				9C140AAB20ABC45F006E6747 /* WLFormSumTextInputCell.m in Sources */,
 				9CF381782084712C00D81AE3 /* main.m in Sources */,
+				9C855F1220AAB58F0074C6CF /* WLFormBottomTipButtonCell.m in Sources */,
 				9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */,
 				9CF3819420847ABD00D81AE3 /* WLFormSectionViewModel+row.m in Sources */,
 				9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */,

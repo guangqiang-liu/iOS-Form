@@ -18,6 +18,7 @@
 #import "WLFormBottomButtonCell.h"
 #import "WLFormRadioCell.h"
 #import "WLFormSelectCell.h"
+#import "WLFormBottomTipButtonCell.h"
 
 @interface ViewController ()
 
@@ -148,7 +149,7 @@
     row.hasBottomSep = NO;
     [section addItem:row];
     
-    dic = @{kLeftKey:@"说明：请输入新邮箱后点击提交，系统会给您重新发送电子发票,请输入新邮箱后点击提交，系统会给您重新发送电子发票"};
+    dic = @{kLeftKey:@"说明：请输入新邮箱后点击提交，系统会给您重新发送电子发票"};
     row = [self rowForBottomTip:dic];
     row.bottomSepLineMarginLeft = 0;
     [section addItem:row];
@@ -183,11 +184,11 @@
 
 - (WLFormItemViewModel *)rowForBottomTip:(NSDictionary *)info {
     WLFormItemViewModel *row = nil;
-    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomTipCell"];
-    row.cellClass = [WLFormBottomTipCell class];
+    row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormBottomTipButtonCell"];
+    row.cellClass = [WLFormBottomTipButtonCell class];
     row.itemHeight = 54.f;
-    row.itemConfigBlock = ^(WLFormBottomTipCell *cell, id value, NSIndexPath *indexPath) {
-        cell.tipStr = info[kLeftKey];
+    row.itemConfigBlock = ^(WLFormBottomTipButtonCell *cell, id value, NSIndexPath *indexPath) {
+        [cell.tipButton setTitle:info[kLeftKey] forState:UIControlStateNormal];
     };
     return row;
 }
@@ -199,10 +200,9 @@
     row.itemHeight = 78.f;
     __weak typeof(self) weakSelf = self;
     row.itemConfigBlock = ^(WLFormBottomButtonCell *cell, id value, NSIndexPath *indexPath) {
-        cell.title = info[kLeftKey];
-        cell.bottomButtonBlock = ^{
-            NSLog(@"点击了提交按钮");
-        };
+        [cell.button setTitle:info[kLeftKey] forState:UIControlStateNormal];
+        [cell.button whenTapped:^{
+        }];
     };
     return row;
 }
