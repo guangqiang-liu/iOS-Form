@@ -5,19 +5,19 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
-  - WLBaseView (0.2.0):
+  - WLBaseView (0.2.2):
     - ReactiveObjC
-    - WLBaseView/Code (= 0.2.0)
-  - WLBaseView/Code (0.2.0):
+    - WLBaseView/Code (= 0.2.2)
+  - WLBaseView/Code (0.2.2):
     - ReactiveObjC
-  - WLIconFont (0.1.6)
-  - WLWidget (0.0.6):
+  - WLIconFont (0.1.7)
+  - WLWidget (0.0.12):
     - SDWebImage
-    - WLWidget/Category (= 0.0.6)
-    - WLWidget/Macro (= 0.0.6)
-  - WLWidget/Category (0.0.6):
+    - WLWidget/Category (= 0.0.12)
+    - WLWidget/Macro (= 0.0.12)
+  - WLWidget/Category (0.0.12):
     - SDWebImage
-  - WLWidget/Macro (0.0.6):
+  - WLWidget/Macro (0.0.12):
     - SDWebImage
 
 DEPENDENCIES:
@@ -32,9 +32,9 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
-  WLBaseView: f470ae54077921395c0fc2b5342d9a3c194762b5
-  WLIconFont: 9eae86bae17c9aa455247d11bebd63a39b608edb
-  WLWidget: ffa26d1d8c28c8c2b4d808299c6878f6c5a4dbb0
+  WLBaseView: 6aec0789d6a65467fad6ca1c1f4bcc09e060753f
+  WLIconFont: 069245eba7ccf7dbefc3fb58bf9d84eba34944dc
+  WLWidget: ac05c0b5020292e0d432e8a94904362ba97cb2cf
 
 PODFILE CHECKSUM: ee9990a0fb37b325b86226b46a1bcf7fa4f8f3fc
 

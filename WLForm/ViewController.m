@@ -30,11 +30,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)renderViews {
+    [super renderViews];
     
+    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
     [self setupViews];
     [self configForm];
-//    [self.form reformResRet:@{@"name":@"xx",@"sex":@"pp"}];
-//    [self.tableView reloadData];
+    //    [self.form reformResRet:@{@"name":@"xx",@"sex":@"pp"}];
+    //    [self.tableView reloadData];
 }
 
 #pragma mark - event response
@@ -87,7 +92,7 @@
     row.hasBottomSep = NO;
     row.valueValidateBlock = ^NSDictionary *(id value) {
         if ([row1.value[kRightKey] isEqualToString:value[kRightKey]]) return itemValid();
-        return itemInvalid(@"Two password should be the same");
+        return itemInvalid(@"密码不一致");
     };
     
     [section addItem:row];
