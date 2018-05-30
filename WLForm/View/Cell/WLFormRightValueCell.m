@@ -1,19 +1,19 @@
 //
-//  WLFormSelectCell.m
+//  WLFormRightValueCell.m
 //  WLForm
 //
-//  Created by 刘光强 on 2018/5/4.
+//  Created by 刘光强 on 2018/5/28.
 //  Copyright © 2018年 quangqiang. All rights reserved.
 //
 
-#import "WLFormSelectCell.h"
+#import "WLFormRightValueCell.h"
 
-@interface WLFormSelectCell()
+@interface WLFormRightValueCell()
 
-@property (nonatomic, strong) UIImageView *arrowImg;
+@property (nonatomic, strong) UILabel *rightLable;
 @end
 
-@implementation WLFormSelectCell
+@implementation WLFormRightValueCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -26,15 +26,14 @@
 - (void)renderViews {
     [self.contentView addSubview:self.leftLable];
     [self.contentView addSubview:self.rightLable];
-    [self.contentView addSubview:self.arrowImg];
 }
 
 - (void)setRightTitle:(NSString *)rightTitle {
     _rightTitle = rightTitle;
     self.rightLable.text = rightTitle;
-    CGSize leftTitleSize = [UILabel calculateLableSizeWithLableText:rightTitle font:H14 maxWidth:200];
+    CGSize leftTitleSize = [UILabel calculateLableSizeWithLableText:self.leftLable.text font:H14 maxWidth:200];
     self.leftLable.frame = CGRectMake(15, 0, WIDTH(self.contentView), HEIGHT(self.contentView));
-    self.rightLable.frame = CGRectMake(leftTitleSize.width + 30, (48 - leftTitleSize.height) / 2, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15 + 20), leftTitleSize.height);
+    self.rightLable.frame = CGRectMake(leftTitleSize.width + 30, (48 - leftTitleSize.height) / 2, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15), leftTitleSize.height);
 }
 
 - (UILabel *)leftLable {
@@ -46,23 +45,14 @@
     return _leftLable;
 }
 
-- (UIImageView *)arrowImg {
-    if (!_arrowImg) {
-        _arrowImg = [[UIImageView alloc] init];
-        _arrowImg.frame = CGRectMake(SCREEN_WIDTH - (15 + 15), (48 - 15) / 2, 15, 15);
-        _arrowImg.image = [WLIcon iconWithName:@"right_arrow_o" size:12 color:HexRGB(0xDEDEDE)];
-    }
-    return _arrowImg;
-}
-
 - (UILabel *)rightLable {
     if (!_rightLable) {
         _rightLable = [[UILabel alloc] init];
+        _rightLable.text = @"1090252020000000000";
         _rightLable.font = H14;
         _rightLable.textAlignment = NSTextAlignmentRight;
         _rightLable.textColor = textBlackColor;
     }
     return _rightLable;
 }
-
 @end

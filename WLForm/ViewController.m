@@ -11,7 +11,6 @@
 #import "WLFormSectionViewModel.h"
 #import "WLForm.h"
 #import "WLFormTextInputCell.h"
-#import "GenderPickerViewVC.h"
 #import "WLFormStepperCell.h"
 #import "WLFormMoreInfoCell.h"
 #import "WLFormBottomTipCell.h"
@@ -56,46 +55,46 @@
 
 #pragma mark - private methods
 - (void)configForm {
-    [self.form addSection:[self accountSection]];
+    [self.form addSection:[self merchantInfo]];
     [self.form addSection:[self detailSection]];
     [self.form addSection:[self moreInfoSection]];
 }
 
-- (WLFormSectionViewModel *)accountSection {
+- (WLFormSectionViewModel *)merchantInfo {
     WLFormSectionViewModel *section = nil;
     WLFormItemViewModel *row = nil;
+    NSDictionary *dic = @{};
     
     section = [[WLFormSectionViewModel alloc] init];
-    section.headerHeight = 50;
-    section.sectionHeaderBgColor = [UIColor whiteColor];
-    section.headerTitleMarginLeft = 15;
-    section.headerTopSepLineHeight = 10;
-    section.headerTopSepLineColor = sepLineColor;
-    section.headerTitleColor = HexRGB(0x434343);
-    section.headerTitleFont = H16;
-    section.headerTitle = @"账号";
+    section.headerHeight = 58;
+    section.headerTitle = @"商户信息（必填）";
     
-    NSDictionary *dic = @{kLeftKey:@"Email", kPlaceholder:@"请输入商户名称"};
-    row = [self rowForFieldWithUserInfo:dic];
+    dic = @{kLeftKey:@"名称", kPlaceholder:@"请输入商户名称"};
+    row = [self textFieldCellWithInfo:dic];
     row.hasTopSep = YES;
-    row.reformResRetBlock = ^(id ret, id value) {
-        NSLog(@"ssss");
-    };
     [section addItem:row];
     
-    dic = @{kLeftKey:@"Password", kPlaceholder:@"请输入Password"};
-    WLFormItemViewModel *row1 = [self rowForFieldWithUserInfo:dic];
-    [section addItem:row1];
+    dic = @{kLeftKey:@"税号", kPlaceholder:@"请输入税号"};
+    row = [self textFieldCellWithInfo:dic];
+    [section addItem:row];
     
-    dic = @{kLeftKey:@"Repeat Password", kPlaceholder:@"请输入Repeat Password"};
-    row = [self rowForFieldWithUserInfo:dic];
+    dic = @{kLeftKey:@"地址", kPlaceholder:@"请输入地址"};
+    row = [self textFieldCellWithInfo:dic];
+    [section addItem:row];
+    
+    dic = @{kLeftKey:@"联系电话", kPlaceholder:@"请输入联系电话"};
+    row = [self textFieldCellWithInfo:dic];
+    [section addItem:row];
+    
+    dic = @{kLeftKey:@"银行账号", kPlaceholder:@"请输入银行账号"};
+    row = [self textFieldCellWithInfo:dic];
+    [section addItem:row];
+    
+    dic = @{kLeftKey:@"开户行", kPlaceholder:@"请输入开户行"};
+    row = [self textFieldCellWithInfo:dic];
     row.hasBottomSep = NO;
-    row.valueValidateBlock = ^NSDictionary *(id value) {
-        if ([row1.value[kRightKey] isEqualToString:value[kRightKey]]) return itemValid();
-        return itemInvalid(@"密码不一致");
-    };
-    
     [section addItem:row];
+    
     return section;
 }
 
@@ -106,28 +105,11 @@
     
     section = [[WLFormSectionViewModel alloc] init];
     section.headerHeight = 50;
-    section.sectionHeaderBgColor = [UIColor whiteColor];
-    section.headerTitleMarginLeft = 15;
-    section.headerTopSepLineHeight = 10;
-    section.headerTopSepLineColor = sepLineColor;
-    section.headerTitleColor = HexRGB(0x434343);
-    section.headerTitleFont = H16;
     section.headerTitle = @"详情";
     
-    NSDictionary *dic = @{kLeftKey:@"Name"};
-    row = [self rowForFieldWithUserInfo:dic];
+    NSDictionary *dic = @{kLeftKey:@"电话", kPlaceholder:@"请输入电话号码"};
+    row = [self textFieldCellWithInfo:dic];
     row.hasTopSep = YES;
-    [section addItem:row];
-    
-    row = [self rowForGender];
-    [section addItem:row];
-    
-    row = [self rowForBirthDay];
-    row.hidden = YES;
-    [section addItem:row];
-    
-    row = [self rowForStepper];
-    row.hasBottomSep = NO;
     [section addItem:row];
     
     dic = @{kLeftKey:@"更多信息（选填）"};
@@ -144,29 +126,17 @@
     
     section = [[WLFormSectionViewModel alloc] init];
     
-    row = [self rowForStepper];
+    dic = @{kLeftKey:@"税控盘类型", @"leftButtonTitle":@"航信金税盘", @"rightButtonTitle":@"百望税控盘"};
+    row = [self rowForRadio:dic];
     [section addItem:row];
     
-    row = [self rowForStepper];
-    [section addItem:row];
-    
-    row = [self rowForStepper];
-    row.hasBottomSep = NO;
+    dic = @{kLeftKey:@"是否已开通电子发票业务", @"leftButtonTitle":@"未开通", @"rightButtonTitle":@"已开通"};
+    row = [self rowForRadio:dic];
     [section addItem:row];
     
     dic = @{kLeftKey:@"说明：请输入新邮箱后点击提交，系统会给您重新发送电子发票"};
     row = [self rowForBottomTip:dic];
-    row.bottomSepLineMarginLeft = 0;
-    [section addItem:row];
-    
-    dic = @{@"leftTitle":@"税控盘类型", @"leftButtonTitle":@"航信金税盘", @"rightButtonTitle":@"百望税控盘"};
-    row = [self rowForRadio:dic];
-    row.bottomSepLineMarginLeft = 0;
-    [section addItem:row];
-    
-    dic = @{@"leftTitle":@"是否已开通电子发票业务", @"leftButtonTitle":@"未开通", @"rightButtonTitle":@"已开通"};
-    row = [self rowForRadio:dic];
-    row.bottomSepLineMarginLeft = 0;
+    row.hasBottomSep = NO;
     [section addItem:row];
     
     dic = @{kLeftKey:@"提交"};
@@ -229,28 +199,6 @@
     return row;
 }
 
-- (WLFormItemViewModel *)rowForGender {
-    WLFormItemViewModel *row = nil;
-    NSDictionary *dic = @{kLeftKey:@"Gender",
-                          kRightKey:@"请选择性别",
-                          kFlagKey:@YES};
-    row = [self rowForSelect:dic];
-    __weak typeof(self) weakSelf = self;
-    row.didSelectCellBlock = ^(NSIndexPath *indexPath, id value, WLFormSelectCell *cell) {
-        GenderPickerViewVC *vc = [[GenderPickerViewVC alloc] init];
-        vc.pickBlock = ^(BOOL isMale) {
-            [weakSelf.navigationController popToViewController:weakSelf animated:YES];
-            value[kRightKey] = isMale ? @"Male" : @"Female";
-            cell.rightTitle = isMale ? @"Male" : @"Female";
-            cell.hasSelected = YES;
-            // 这个地方，当执行刷新操作时，会将之前的部分状态重置掉，这个地方需求修改
-//            [weakSelf.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-        };
-        [weakSelf.navigationController pushViewController:vc animated:YES];
-    };
-    return row;
-}
-
 - (WLFormItemViewModel *)rowForSelect:(NSDictionary *)info {
     WLFormItemViewModel *row = nil;
     row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormSelectCell"];
@@ -267,7 +215,7 @@
 - (WLFormItemViewModel *)rowForBirthDay {
     WLFormItemViewModel *row = nil;
     NSDictionary *dic = @{kLeftKey:@"Date of Birth"};
-    row = [self rowForFieldWithUserInfo:dic];
+    row = [self textFieldCellWithInfo:dic];
     row.disableValidateBlock = ^NSDictionary *(id value, BOOL didClicked) {
         [self.form reformResRet:@{@"key":@"value"}];
         NSString *msg = @"此行已禁用，暂不支持";
@@ -293,16 +241,17 @@
     return row;
 }
 
-- (WLFormItemViewModel *)rowForFieldWithUserInfo:(NSDictionary *)userInfo {
+- (WLFormItemViewModel *)textFieldCellWithInfo:(NSDictionary *)info {
     WLFormItemViewModel *row = nil;
     row = [[WLFormItemViewModel alloc] initFormItemWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"WLFormTextInputCell"];
     row.itemHeight = 48;
     row.cellClass = [WLFormTextInputCell class];
-    row.value = userInfo.mutableCopy;
+    row.value = info.mutableCopy;
     row.itemConfigBlock = ^(WLFormTextInputCell *cell, id value, NSIndexPath *indexPath) {
         cell.leftlabel.text = value[kLeftKey];
         cell.rightField.text = value[kRightKey];
         cell.rightField.enabled = ![value[kDisableKey] boolValue];
+        cell.rightField.textColor = [value[kDisableKey] boolValue] ? HexRGB(0xcfcfcf) : textBlackColor;
         cell.rightField.placeholder = value[kPlaceholder];
         cell.textChangeBlock = ^(NSString *text) {
             value[kRightKey] = text;
@@ -312,6 +261,10 @@
         NSMutableDictionary *ret = [NSMutableDictionary dictionaryWithCapacity:1];
         ret[value[kLeftKey]] = value[kRightKey];
         return ret;
+    };
+    row.valueValidateBlock = ^NSDictionary *(id value) {
+        if ([value[kRightKey] length] || [value[kDispensable] boolValue]) return itemValid();
+        return itemInvalid(value[kPlaceholder]);
     };
     return row;
 }
