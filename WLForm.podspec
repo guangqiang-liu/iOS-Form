@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WLForm'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = '自定义通用表单组件'
 
 # This description is used to generate tags and improve search results.
