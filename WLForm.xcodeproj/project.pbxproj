@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E4E10AB00402C5CC94B3530 /* Pods_WLForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8188FD89DA02664762D05E42 /* Pods_WLForm.framework */; };
 		9C140AAB20ABC45F006E6747 /* WLFormSumTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C140AAA20ABC45F006E6747 /* WLFormSumTextInputCell.m */; };
 		9C264758209B08B3004A4551 /* WLFormSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C264757209B08B3004A4551 /* WLFormSectionHeaderView.m */; };
 		9C26475B209B08D3004A4551 /* WLFormSectionFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C26475A209B08D3004A4551 /* WLFormSectionFooterView.m */; };
@@ -40,10 +41,10 @@
 		9CF3819720847ACC00D81AE3 /* WLForm+section.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819620847ACC00D81AE3 /* WLForm+section.m */; };
 		9CF3819D20849A0800D81AE3 /* UITableViewCell+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3819C20849A0800D81AE3 /* UITableViewCell+Extention.m */; };
 		9CF381A32084AA1400D81AE3 /* WLFormTextInputCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */; };
-		F57C737755D8137DCC1B9C70 /* Pods_WLForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA237F082FC05A6DC26A789 /* Pods_WLForm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8188FD89DA02664762D05E42 /* Pods_WLForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E9D259BDEF4CB6806655A9 /* Pods-WLForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLForm.release.xcconfig"; path = "Pods/Target Support Files/Pods-WLForm/Pods-WLForm.release.xcconfig"; sourceTree = "<group>"; };
 		9C140AA920ABC45F006E6747 /* WLFormSumTextInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormSumTextInputCell.h; sourceTree = "<group>"; };
 		9C140AAA20ABC45F006E6747 /* WLFormSumTextInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormSumTextInputCell.m; sourceTree = "<group>"; };
@@ -105,7 +106,6 @@
 		9CF381A12084AA1400D81AE3 /* WLFormTextInputCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLFormTextInputCell.h; sourceTree = "<group>"; };
 		9CF381A22084AA1400D81AE3 /* WLFormTextInputCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WLFormTextInputCell.m; sourceTree = "<group>"; };
 		9CF381AA2084D07000D81AE3 /* WLForm.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WLForm.pch; sourceTree = "<group>"; };
-		DDA237F082FC05A6DC26A789 /* Pods_WLForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WLForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E564B3D2A3ACEA23BB4EF3D0 /* Pods-WLForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WLForm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WLForm/Pods-WLForm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57C737755D8137DCC1B9C70 /* Pods_WLForm.framework in Frameworks */,
+				3E4E10AB00402C5CC94B3530 /* Pods_WLForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,7 +124,7 @@
 		2D7DF3B6473A6D8F02B70977 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DDA237F082FC05A6DC26A789 /* Pods_WLForm.framework */,
+				8188FD89DA02664762D05E42 /* Pods_WLForm.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -418,10 +418,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WLForm/Pods-WLForm-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"${PODS_ROOT}/WLBaseView/WLBaseView/Resource/icon_back@2x.png",
+				"${PODS_ROOT}/WLBaseView/WLBaseView/Resource/icon_back@3x.png",
+				"${PODS_CONFIGURATION_BUILD_DIR}/WLIconFont/WLIconFont.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_back@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/icon_back@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WLIconFont.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
