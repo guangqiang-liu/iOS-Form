@@ -90,13 +90,13 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     WLFormSectionViewModel *viewModel = self.form.sectionArray[section];
-    WLFormSectionHeaderView *view = [[WLFormSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, viewModel.headerHeight) viewModel:viewModel];
+    WLFormSectionHeaderView *view = [[WLFormSectionHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, viewModel.headerHeight) viewModel:viewModel];
     return view;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     WLFormSectionViewModel *viewModel = self.form.sectionArray[section];
-    WLFormSectionFooterView *view = [[WLFormSectionFooterView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, viewModel.footerHeight) viewModel:viewModel];
+    WLFormSectionFooterView *view = [[WLFormSectionFooterView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, viewModel.footerHeight) viewModel:viewModel];
     return view;
 }
 
@@ -148,7 +148,7 @@
 #pragma mark - getter\setter
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) style:UITableViewStyleGrouped];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.rowHeight = UITableViewAutomaticDimension;

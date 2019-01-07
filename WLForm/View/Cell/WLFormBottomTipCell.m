@@ -32,14 +32,14 @@
 - (void)setTipStr:(NSString *)tipStr {
     _tipStr = tipStr;
     self.tipLable.text = tipStr;
-    CGSize tipSize = [UILabel calculateLableSizeWithLableText:tipStr font:H12 maxWidth:SCREEN_WIDTH - 40];
-    self.tipLable.frame = CGRectMake(20, 0, SCREEN_WIDTH - 40, tipSize.height + 32);
+    CGSize tipSize = [UILabel calculateLableSizeWithLableText:tipStr font:H12 maxWidth:kScreenWidth - 40];
+    self.tipLable.frame = CGRectMake(20, 0, kScreenWidth - 40, tipSize.height + 32);
 }
 
 - (UILabel *)tipLable {
     if (!_tipLable) {
         _tipLable = [[UILabel alloc] init];
-        _tipLable.frame = CGRectMake(20, 0, SCREEN_WIDTH - 40, HEIGHT(self.contentView));
+        _tipLable.frame = CGRectMake(20, 0, kScreenWidth - 40, HEIGHT(self.contentView));
         _tipLable.textColor = HexRGB(0x999999);
         _tipLable.font = H12;
         _tipLable.numberOfLines = 2;

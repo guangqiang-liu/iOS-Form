@@ -31,7 +31,7 @@
     [super layoutSubviews];
     CGSize leftTitleSize = [self.leftlabel sizeWithText:self.leftlabel.text font:H14];
     self.leftlabel.frame = CGRectMake(15, 0, self.contentView.frame.size.width, self.contentView.frame.size.height);
-    self.rightField.frame = CGRectMake(leftTitleSize.width + 30, 10, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15), self.contentView.frame.size.height - 2 * 10);
+    self.rightField.frame = CGRectMake(leftTitleSize.width + 30, 10, kScreenWidth - (leftTitleSize.width + 30 + 15), self.contentView.frame.size.height - 2 * 10);
 }
 
 - (void)setTextChangeBlock:(void (^)(NSString *))textChangeBlock {

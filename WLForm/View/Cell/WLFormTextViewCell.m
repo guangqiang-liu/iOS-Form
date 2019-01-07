@@ -31,7 +31,7 @@
     [super layoutSubviews];
     CGSize leftTitleSize = [self.leftTitle sizeWithText:self.leftTitle.text font:H14];
     self.leftTitle.frame = CGRectMake(15, 0, leftTitleSize.width, HEIGHT(self.contentView));
-    self.textView.frame = CGRectMake(leftTitleSize.width + 30, 5, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15), HEIGHT(self.contentView) -10);
+    self.textView.frame = CGRectMake(leftTitleSize.width + 30, 5, kScreenWidth - (leftTitleSize.width + 30 + 15), HEIGHT(self.contentView) -10);
 }
 
 - (void)setTextChangeBlock:(void (^)(NSString *))textChangeBlock {
@@ -77,7 +77,7 @@
 - (UITextView *)textView {
     if (!_textView) {
         _textView = [[UITextView alloc] init];
-        _textView.textColor = textBlackColor;
+        _textView.textColor = textDarkBlackColor;
         _textView.font = H14;
         _textView.textAlignment = NSTextAlignmentRight;
         _textView.delegate = self;

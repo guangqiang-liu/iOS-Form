@@ -31,12 +31,12 @@
 - (UIButton *)button {
     if (!_button) {
         _button = [UIButton buttonWithType:UIButtonTypeCustom];
-        _button.frame = CGRectMake(15, 16, SCREEN_WIDTH - 30, 44);
+        _button.frame = CGRectMake(15, 16, kScreenWidth - 30, 44);
         [_button setTitleColor:white_color forState:UIControlStateNormal];
         _button.titleLabel.font = H18;
         _button.layer.cornerRadius = 4;
         _button.layer.masksToBounds = YES;
-        [_button createGradientButtonWithSize:CGSizeMake(SCREEN_WIDTH - 30, 44) colorArray:@[HexRGB(0xFF7E4A), HexRGB(0xFF4A4A)] gradientType:GradientFromLeftToRight];
+        [_button createGradientButtonWithSize:CGSizeMake(kScreenWidth - 30, 44) colorArray:@[HexRGB(0xFF7E4A), HexRGB(0xFF4A4A)] gradientType:GradientFromLeftToRight];
     }
     return _button;
 }

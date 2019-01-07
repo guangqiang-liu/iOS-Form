@@ -34,7 +34,7 @@
 - (void)renderViews {
     [super renderViews];
     
-    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+    self.tableView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64);
     [self setupViews];
     [self configForm];
     //    [self.form reformResRet:@{@"name":@"xx",@"sex":@"pp"}];
@@ -251,7 +251,7 @@
         cell.leftlabel.text = value[kLeftKey];
         cell.rightField.text = value[kRightKey];
         cell.rightField.enabled = ![value[kDisableKey] boolValue];
-        cell.rightField.textColor = [value[kDisableKey] boolValue] ? HexRGB(0xcfcfcf) : textBlackColor;
+        cell.rightField.textColor = [value[kDisableKey] boolValue] ? HexRGB(0xcfcfcf) : textDarkBlackColor;
         cell.rightField.placeholder = value[kPlaceholder];
         cell.textChangeBlock = ^(NSString *text) {
             value[kRightKey] = text;

@@ -30,7 +30,7 @@
 - (UIButton *)tipButton {
     if(!_tipButton) {
         _tipButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _tipButton.frame = CGRectMake(0, 0, SCREEN_WIDTH, 54);
+        _tipButton.frame = CGRectMake(0, 0, kScreenWidth, 54);
         [_tipButton setTitle:@"button" forState:UIControlStateNormal];
         [_tipButton setTitleColor:textGrayColor forState:UIControlStateNormal];
         _tipButton.titleLabel.font = H12;

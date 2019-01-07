@@ -33,7 +33,7 @@
     self.rightLable.text = rightTitle;
     CGSize leftTitleSize = [UILabel calculateLableSizeWithLableText:self.leftLable.text font:H14 maxWidth:200];
     self.leftLable.frame = CGRectMake(15, 0, WIDTH(self.contentView), HEIGHT(self.contentView));
-    self.rightLable.frame = CGRectMake(leftTitleSize.width + 30, (48 - leftTitleSize.height) / 2, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15), leftTitleSize.height);
+    self.rightLable.frame = CGRectMake(leftTitleSize.width + 30, (48 - leftTitleSize.height) / 2, kScreenWidth - (leftTitleSize.width + 30 + 15), leftTitleSize.height);
 }
 
 - (UILabel *)leftLable {
@@ -51,7 +51,7 @@
         _rightLable.text = @"1090252020000000000";
         _rightLable.font = H14;
         _rightLable.textAlignment = NSTextAlignmentRight;
-        _rightLable.textColor = textBlackColor;
+        _rightLable.textColor = textDarkBlackColor;
     }
     return _rightLable;
 }

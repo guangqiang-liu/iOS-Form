@@ -37,8 +37,8 @@
     [super layoutSubviews];
     CGSize leftTitleSize = [self.leftLable sizeWithText:self.leftLable.text font:H14];
     self.leftLable.frame = CGRectMake(15, 0, self.contentView.frame.size.width, self.contentView.frame.size.height);
-    self.rightInput.frame = CGRectMake(leftTitleSize.width + 30, 10, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15 + 20), self.contentView.frame.size.height - 2 * 10);
-    self.unitLable.frame = CGRectMake(SCREEN_WIDTH - 30, 0, 15, self.contentView.frame.size.height);
+    self.rightInput.frame = CGRectMake(leftTitleSize.width + 30, 10, kScreenWidth - (leftTitleSize.width + 30 + 15 + 20), self.contentView.frame.size.height - 2 * 10);
+    self.unitLable.frame = CGRectMake(kScreenWidth - 30, 0, 15, self.contentView.frame.size.height);
 }
 
 - (void)setTextChangeBlock:(void (^)(NSString *))textChangeBlock {
@@ -59,7 +59,7 @@
     if (!_unitLable) {
         _unitLable = [[UILabel alloc] init];
         _unitLable.text = @"元";
-        _unitLable.textColor = textBlackColor;
+        _unitLable.textColor = textDarkBlackColor;
         _unitLable.font = H14;
     }
     return _unitLable;

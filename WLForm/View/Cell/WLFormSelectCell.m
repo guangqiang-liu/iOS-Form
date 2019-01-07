@@ -34,7 +34,7 @@
     self.rightLable.text = rightTitle;
     CGSize leftTitleSize = [UILabel calculateLableSizeWithLableText:rightTitle font:H14 maxWidth:200];
     self.leftLable.frame = CGRectMake(15, 0, WIDTH(self.contentView), HEIGHT(self.contentView));
-    self.rightLable.frame = CGRectMake(leftTitleSize.width + 30, (48 - leftTitleSize.height) / 2, SCREEN_WIDTH - (leftTitleSize.width + 30 + 15 + 20), leftTitleSize.height);
+    self.rightLable.frame = CGRectMake(leftTitleSize.width + 30, (48 - leftTitleSize.height) / 2, kScreenWidth - (leftTitleSize.width + 30 + 15 + 20), leftTitleSize.height);
 }
 
 - (UILabel *)leftLable {
@@ -49,7 +49,7 @@
 - (UIImageView *)arrowImg {
     if (!_arrowImg) {
         _arrowImg = [[UIImageView alloc] init];
-        _arrowImg.frame = CGRectMake(SCREEN_WIDTH - (15 + 15), (48 - 15) / 2, 15, 15);
+        _arrowImg.frame = CGRectMake(kScreenWidth - (15 + 15), (48 - 15) / 2, 15, 15);
         _arrowImg.image = [WLIcon iconWithName:@"right_arrow_o" size:12 color:HexRGB(0xDEDEDE)];
     }
     return _arrowImg;
@@ -60,7 +60,7 @@
         _rightLable = [[UILabel alloc] init];
         _rightLable.font = H14;
         _rightLable.textAlignment = NSTextAlignmentRight;
-        _rightLable.textColor = textBlackColor;
+        _rightLable.textColor = textDarkBlackColor;
     }
     return _rightLable;
 }

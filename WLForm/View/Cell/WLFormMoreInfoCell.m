@@ -43,7 +43,7 @@
 - (UIView *)sepLine {
     if (!_sepLine) {
         _sepLine = [[UIView alloc] init];
-        _sepLine.frame = CGRectMake(0, 0, SCREEN_WIDTH, 10);
+        _sepLine.frame = CGRectMake(0, 0, kScreenWidth, 10);
         _sepLine.backgroundColor = sepLineColor;
     }
     return _sepLine;
@@ -53,7 +53,7 @@
     if (!_leftTitle) {
         _leftTitle = [[UILabel alloc] init];
         CGSize titleSize = [_leftTitle sizeWithText:@"更多信息（选填）" font:H14];
-        _leftTitle.frame = CGRectMake(15, (54 - titleSize.height) / 2 + 5, SCREEN_WIDTH, titleSize.height);
+        _leftTitle.frame = CGRectMake(15, (54 - titleSize.height) / 2 + 5, kScreenWidth, titleSize.height);
         _leftTitle.textColor = HexRGB(0x434343);
         _leftTitle.font = H14;
         [_leftTitle whenTapped:^{
@@ -66,7 +66,7 @@
 - (UIButton *)rightButton {
     if (!_rightButton) {
         _rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _rightButton.frame = CGRectMake(SCREEN_WIDTH - 40, (54 - 20) / 2 + 5, 30, 20);
+        _rightButton.frame = CGRectMake(kScreenWidth - 40, (54 - 20) / 2 + 5, 30, 20);
         [_rightButton setImage:[WLIcon iconWithName:@"arrow_up_o" size:15 color:HexRGB(0x999999)] forState:UIControlStateNormal];
         [_rightButton addTarget:self action:@selector(foldClick) forControlEvents:UIControlEventTouchUpInside];
     }
